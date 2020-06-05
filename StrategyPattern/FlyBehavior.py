@@ -1,8 +1,7 @@
 """
     All classes should implement the following methods
 
-    def fly(self) :
-
+    1. def fly(self) :
 """
 
 class FlyWithWings :
