@@ -5,14 +5,14 @@ import FlyBehavior
 import QuackBehavior
 
 class Duck :
-    fly_behavior = None
-    quack_behavior = None
+    flyBehavior = None
+    quackBehavior = None
 
-    def perform_quack(self) :
-        self.quack_behavior.quack()
+    def performQuack(self) :
+        self.quackBehavior.quack()
     
-    def perform_fly(self) :
-        self.fly_behavior.fly()
+    def performFly(self) :
+        self.flyBehavior.fly()
 
     def swim(self) :
         print('All ducks float, even decoy!')
@@ -23,16 +23,16 @@ class Duck :
 
 class MallardDuck(Duck) :
     def __init__(self) :
-        self.quack_behavior = QuackBehavior.Quack()
-        self.fly_behavior = FlyBehavior.FlyWithWings()
+        self.quackBehavior = QuackBehavior.Quack()
+        self.flyBehavior = FlyBehavior.FlyWithWings()
 
     def display(self) :
         print('I\'m a real Mallard duck.')
     
 class ModelDuck(Duck) :
     def __init__(self) :
-        self.fly_behavior = FlyBehavior.FlyNoWay()
-        self.quack_behavior = QuackBehavior.Quack()
+        self.flyBehavior = FlyBehavior.FlyNoWay()
+        self.quackBehavior = QuackBehavior.Quack()
 
     def display(self) :
         print('I\'m a real model duck.')

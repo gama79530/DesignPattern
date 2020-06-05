@@ -5,14 +5,14 @@ if __name__ == "__main__" :
 
     mallard = Duck.MallardDuck()
     mallard.display()
-    mallard.perform_quack()
-    mallard.perform_fly()
+    mallard.performQuack()
+    mallard.performFly()
 
     print('----------')
 
     model_duck = Duck.ModelDuck()
     model_duck.display()
-    model_duck.perform_quack()
-    model_duck.perform_fly()
-    model_duck.fly_behavior = FlyBehavior.FlyRocketPowered()
-    model_duck.perform_fly()
+    model_duck.performQuack()
+    model_duck.performFly()
+    model_duck.flyBehavior = FlyBehavior.FlyRocketPowered()
+    model_duck.performFly()
