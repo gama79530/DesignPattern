@@ -1,7 +1,7 @@
 """
     All classes should implement the following methods
 
-    1. def quack(self) :
+    def quack(self) :
 """
 
 class Quack :

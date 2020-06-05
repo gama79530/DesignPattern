@@ -14,5 +14,5 @@ if __name__ == "__main__" :
     model_duck.display()
     model_duck.perform_quack()
     model_duck.perform_fly()
-    model_duck.flyBehavior = FlyBehavior.FlyRocketPowered()
+    model_duck.fly_behavior = FlyBehavior.FlyRocketPowered()
     model_duck.perform_fly()
