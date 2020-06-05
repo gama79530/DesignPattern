@@ -8,10 +8,10 @@ class Duck :
     fly_behavior = None
     quack_behavior = None
 
-    def perform_quack(self) :
+    def performQuack(self) :
         self.quack_behavior.quack()
     
-    def perform_fly(self) :
+    def performFly(self) :
         self.fly_behavior.fly()
 
     def swim(self) :
