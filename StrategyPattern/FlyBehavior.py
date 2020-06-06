@@ -1,8 +1,6 @@
 """
-    All classes should implement the following methods
-
+    All classes should implement the following methods.
     def fly(self) :
-
 """
 
 class FlyWithWings :
