@@ -1,6 +1,5 @@
 """
-    All classes should implement the following methods
-
+    All classes should implement the following methods.
     def update(self, subject=None) :
     def display(self) : # Due to this scenario, not for this pattern.
 """
