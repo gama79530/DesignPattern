@@ -38,9 +38,7 @@ class Decaf(Beverage) :
         return 1.05
 
 """
-    All decorator classes should extend Condiment.
-
-    All decorator classes should override or implement the following methods.
+    All decorator classes should extend Condiment and override the following methods.
     def getDescription(self) :
     def cost(self) :
 """
@@ -50,6 +48,9 @@ class Condiment(Beverage) :
 
     def __init__(self, beverage) :
         self.beverage = beverage
+
+    def getDescription(self) :
+        assert False, 'This method should be overrided.'
 
 class Milk(Condiment) :
     def getDescription(self) :

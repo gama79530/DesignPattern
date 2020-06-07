@@ -1,0 +1,23 @@
+@startuml
+
+interface Beverage{
+    description
+    getDescription()
+}
+
+interface Condiment{
+    beverage
+}
+
+Beverage <|-- Espresso
+Beverage <|-- HouseBlend
+Beverage <|-- DarkRoast
+Beverage <|-- Decaf
+Beverage <|-- Condiment
+
+Condiment <|-- Milk
+Condiment <|-- Mocha
+Condiment <|-- Soy
+Condiment <|-- Whip
+
+@enduml
