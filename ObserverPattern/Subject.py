@@ -1,5 +1,5 @@
 """
-    All classes should extends Subject.
+    All classes should extend Subject.
 """
 
 class Subject :

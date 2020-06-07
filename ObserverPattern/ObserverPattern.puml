@@ -1,0 +1,22 @@
+@startuml
+
+interface Subject{
+    registerObserver()
+    removeObserver()
+    notifyObserver()
+    hasChange()
+}
+
+interface Observer{
+    subject
+    __ abstract __
+    update()
+}
+
+Subject <|-- WeatherData
+
+Observer <|-- CurrentConditionsDisplay
+Observer <|-- StatisticsDisplay
+Observer <|-- ForecastDisplay
+
+@enduml

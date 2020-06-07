@@ -1,19 +1,31 @@
 """
-    All classes should implement the following methods.
+    All classes should extend Observer and override Observer the following methods
+
     def update(self, subject=None) :
-    def display(self) : # Due to this scenario, not for this pattern.
+
+
+    All classes should implement the following methods (# Due to this scenario, not for this pattern)
+    
+    def display(self) : 
 """
 import Subject
 
-class CurrentConditionsDisplay :
+
+class Observer :
     subject = None
-    temperature = None
-    humidity = None
-    
+
     def __init__(self, subject) :
         self.subject = subject
         subject.registerPushObserver(self)
 
+    def update(self, subject=None) :
+        assert False, 'This method should be overrided.'
+
+
+class CurrentConditionsDisplay(Observer) :
+    temperature = None
+    humidity = None
+    
     def update(self, subject=None) :
         if subject :
             self.temperature = subject.temperature
@@ -27,16 +39,11 @@ class CurrentConditionsDisplay :
         print('Current conditions: {:.1f} F degrees and {:.1f} % humidity.'.format(self.temperature, self.humidity))
 
 
-class StatisticsDisplay :
-    subject = None
+class StatisticsDisplay(Observer) :
     temperatures = []
     avg_temperature = None
     max_temperature = None
     min_temperature = None
-
-    def __init__(self, subject) :
-        self.subject = subject
-        subject.registerPullObserver(self)
 
     def update(self, subject=None) :
         if subject :
@@ -51,16 +58,11 @@ class StatisticsDisplay :
 
     def display(self) :
         print('Avg/Max/Min temperature = {:.1f} / {:.1f} / {:.1f}'.format(self.avg_temperature, self.max_temperature, self.min_temperature))
+      
         
-class ForecastDisplay :
-    subject = None
+class ForecastDisplay(Observer) :
     current_pressure = 0.0
     last_pressure = 0.0
-
-    
-    def __init__(self, subject) :
-        self.subject = subject
-        subject.registerPushObserver(self)
 
     def update(self, subject=None) :
         self.last_pressure = self.current_pressure
