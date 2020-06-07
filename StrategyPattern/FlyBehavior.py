@@ -1,16 +1,20 @@
 """
-    All classes should implement the following methods.
+    All classes should extend FlyBehavior and override the following attributes or methods.
+
     def fly(self) :
 """
+class FlyBehavior :
+    def fly(self) :
+        assert False, 'This method should be overrided.' 
 
-class FlyWithWings :
+class FlyWithWings(FlyBehavior) :
     def fly(self) :
         print('I\'m flying!')
 
-class FlyNoWay :
+class FlyNoWay(FlyBehavior) :
     def fly(self) :
         print('I can\'t fly.')
 
-class FlyRocketPowered :
+class FlyRocketPowered(FlyBehavior) :
     def fly(self) :
         print('I\'m flying with rocket!')

@@ -18,7 +18,7 @@ class Duck :
         print('All ducks float, even decoy!')
 
     def display(self) :
-        assert(False, 'This is default Duck. You should override this method')
+        assert False, 'This is default Duck. You should override this method.'
     
 
 class MallardDuck(Duck) :

@@ -1,0 +1,32 @@
+@startuml
+interface Duck{
+    fly_behavior
+    quack_behavior
+    __
+    performQuack()
+    performFly()
+    swim()
+    __ Abstract __
+    display()
+}
+
+interface FlyBehavior{
+    fly()
+}
+
+interface QuackBehavior{
+    fly()
+}
+
+Duck *-- FlyBehavior
+Duck *-- QuackBehavior
+
+FlyBehavior <|-- FlyWithWings
+FlyBehavior <|-- FlyNoWay
+FlyBehavior <|-- FlyRocketPowered
+
+QuackBehavior <|-- Quack
+QuackBehavior <|-- Squack
+QuackBehavior <|-- MuteQuack
+
+@enduml
