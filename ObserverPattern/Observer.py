@@ -1,5 +1,5 @@
 """
-    All classes should extend Observer and override Observer the following methods
+    All classes should extend Observer and override the following methods
 
     def update(self, subject=None) :
 
