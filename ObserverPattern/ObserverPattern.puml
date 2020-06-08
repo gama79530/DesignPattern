@@ -19,4 +19,6 @@ Observer <|-- CurrentConditionsDisplay
 Observer <|-- StatisticsDisplay
 Observer <|-- ForecastDisplay
 
+Observer o-- Subject
+
 @enduml
