@@ -6,6 +6,10 @@ class Subject :
     pushObserver = []
     pullObserver = []
 
+    def __init__(self):
+        self.pushObserver = []
+        self.pullObserver = []
+
     def registerPushObserver(self, observer) :
         self.pushObserver.append(observer)
 
