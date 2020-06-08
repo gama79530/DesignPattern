@@ -20,4 +20,6 @@ Condiment <|-- Mocha
 Condiment <|-- Soy
 Condiment <|-- Whip
 
+Condiment *-- Beverage
+
 @enduml
