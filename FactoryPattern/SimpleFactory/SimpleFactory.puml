@@ -1,0 +1,14 @@
+@startuml
+interface Pizza{
+    name
+    dough
+    sauce
+    toppings
+
+    prepare()
+    bake()
+    cut()
+    box()
+    toString()
+}
+@enduml
