@@ -18,8 +18,8 @@ interface QuackBehavior{
     fly()
 }
 
-Duck *-- FlyBehavior
-Duck *-- QuackBehavior
+FlyBehavior *-- Duck
+QuackBehavior *-- Duck
 
 FlyBehavior <|-- FlyWithWings
 FlyBehavior <|-- FlyNoWay
