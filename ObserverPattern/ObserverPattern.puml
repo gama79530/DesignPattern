@@ -19,6 +19,7 @@ Observer <|-- CurrentConditionsDisplay
 Observer <|-- StatisticsDisplay
 Observer <|-- ForecastDisplay
 
-Observer o-- Subject
+Subject o-- Observer
+Observer o-- Subject : unnecessary
 
 @enduml
