@@ -1,6 +1,5 @@
 """
-    All classes should extend FlyBehavior and override the following or methods.
-
+    # All classes should extend FlyBehavior and override the following or methods.
     def fly(self) :
 """
 class FlyBehavior :

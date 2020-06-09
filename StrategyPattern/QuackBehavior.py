@@ -1,6 +1,5 @@
 """
-    All classes should extend FlyBehavior and override the following methods.
-
+    # All classes should extend FlyBehavior and override the following methods.
     def quack(self) :
 """
 

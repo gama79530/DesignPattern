@@ -1,5 +1,5 @@
 """
-    All classes should extend Duck.
+    # All classes should extend Duck.
 """
 import FlyBehavior
 import QuackBehavior
