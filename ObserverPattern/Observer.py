@@ -1,11 +1,8 @@
 """
-    All classes should extend Observer and override the following methods
-
+    # All classes should extend Observer and override the following methods
     def update(self, subject=None) :
 
-
-    All classes should implement the following methods (# Due to this scenario, not for this pattern)
-    
+    # All classes should implement the following methods (# Due to this scenario, not for this pattern)
     def display(self) : 
 """
 import Subject
