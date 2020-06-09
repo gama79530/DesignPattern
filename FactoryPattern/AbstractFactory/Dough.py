@@ -1,6 +1,5 @@
 """
-    All classes should extend Dough and override the following methods
-
+    # All classes should extend Dough and override the following methods
     def __str__(selt)
 """
 

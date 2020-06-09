@@ -1,11 +1,12 @@
 """
-    All classes should extend Pizza.
+    # All classes should extend Pizza.
 """
 class Pizza :
-    name = None
-    dough = None
-    sauce = None
-    toppings = []
+    def __init__(self) :
+        self.name = None
+        self.dough = None
+        self.sauce = None
+        self.toppings = []
 
     def prepare(self) :
         print('Preparing {}'.format(self.name))
@@ -33,7 +34,7 @@ class Pizza :
             
 class ChicagoStyleCheesePizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "Chicago Style Deep Dish Cheese Pizza"
         self.dough = "Extra Thick Crust Dough"
         self.sauce = "Plum Tomato Sauce"
@@ -44,7 +45,7 @@ class ChicagoStyleCheesePizza(Pizza) :
             
 class ChicagoStyleClamPizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "Chicago Style Clam Pizza"
         self.dough = "Extra Thick Crust Dough"
         self.sauce = "Plum Tomato Sauce"
@@ -56,7 +57,7 @@ class ChicagoStyleClamPizza(Pizza) :
             
 class ChicagoStylePepperoniPizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "Chicago Style Pepperoni Pizza"
         self.dough = "Extra Thick Crust Dough"
         self.sauce = "Plum Tomato Sauce"
@@ -71,7 +72,7 @@ class ChicagoStylePepperoniPizza(Pizza) :
 
 class ChicagoStyleVeggiePizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "Chicago Deep Dish Veggie Pizza"
         self.dough = "Extra Thick Crust Dough"
         self.sauce = "Plum Tomato Sauce"
@@ -85,7 +86,7 @@ class ChicagoStyleVeggiePizza(Pizza) :
             
 class NYStyleCheesePizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "NY Style Sauce and Cheese Pizza"
         self.dough = "Thin Crust Dough"
         self.sauce = "Marinara Sauce"
@@ -93,7 +94,7 @@ class NYStyleCheesePizza(Pizza) :
 
 class NYStyleClamPizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "NY Style Clam Pizza"
         self.dough = "Thin Crust Dough"
         self.sauce = "Marinara Sauce"
@@ -102,7 +103,7 @@ class NYStyleClamPizza(Pizza) :
             
 class NYStylePepperoniPizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "NY Style Pepperoni Pizza"
         self.dough = "Thin Crust Dough"
         self.sauce = "Marinara Sauce"
@@ -115,7 +116,7 @@ class NYStylePepperoniPizza(Pizza) :
 
 class NYStyleVeggiePizza(Pizza) :
     def __init__(self):
-        self.toppings = []
+        super().__init__()
         self.name = "NY Style Veggie Pizza"
         self.dough = "Thin Crust Dough"
         self.sauce = "Marinara Sauce"

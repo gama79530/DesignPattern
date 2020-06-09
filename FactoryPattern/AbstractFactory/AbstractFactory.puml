@@ -14,7 +14,7 @@ interface Pizza{
     pepperoni
     sauce
     veggies
-        
+
     prepare()
     bake()
     cut()
@@ -46,7 +46,7 @@ interface Veggies{
     toString()
 }
 
-interface PizzaIngredientsFactory{
+interface PizzaIngredientFactory{
     createCheese()
     createClams()
     createDough()
@@ -94,5 +94,8 @@ Veggies <|-- Onion
 Veggies <|-- RedPepper
 Veggies <|-- Spinach
 Veggies <|-- Eggplant
+
+PizzaIngredientFactory <|-- ChicagoPizzaIngredientFactory
+PizzaIngredientFactory <|-- NYPizzaIngredientFactory
 
 @enduml

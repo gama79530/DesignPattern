@@ -1,13 +1,11 @@
 """
-    All classes should extend ChicagoPizzaIngredientFactory and override the following methods
-
+    # All classes should extend ChicagoPizzaIngredientFactory and override the following methods
     def createCheese(self) :
     def createClams(self) :
     def createDough(self) :
     def createPepperoni(self) :
     def createSauce(self) :
     def createVeggies(self) :
-
 """
 import Cheese
 import Clams

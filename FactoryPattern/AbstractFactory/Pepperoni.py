@@ -1,6 +1,5 @@
 """
-    All classes should extend Pepperoni and override the following methods
-
+    # All classes should extend Pepperoni and override the following methods
     def __str__(selt)
 """
 

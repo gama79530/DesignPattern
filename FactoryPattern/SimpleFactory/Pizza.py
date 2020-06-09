@@ -1,35 +1,32 @@
 """
-    All classes should extend Pizza.
+    # All classes should extend Pizza.
 """
 class Pizza :
-    name = None
-    dough = None
-    sauce = None
-    toppings = None
-
     def __init__(self):
+        self.name = None
+        self.dough = None
+        self.sauce = None
+        self.toppings = None
         self.toppings = []
 
-        
     def prepare(self) :
         print('Preparing {}'.format(self.name))
 
     def bake(self) :
         print('Baking {}'.format(self.name))
-    
+
     def cut(self) :
         print('Cutting {}'.format(self.name))
-    
+
     def box(self) :
         print('Boxing {}'.format(self.name))
-        
+
     def __str__(self):
         result = "---- {} ----\n".format(self.name)
         result += ('{}\n'.format(self.dough))
         result += ('{}\n'.format(self.sauce))
         for topping in self.toppings :
             result += ('{}\n'.format(topping))
-
         return result
 
 class CheesePizza(Pizza) :

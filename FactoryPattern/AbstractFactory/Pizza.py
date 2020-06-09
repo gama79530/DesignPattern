@@ -1,22 +1,19 @@
 """
-    All classes should extend Pizza and override the following methods
-
+    # All classes should extend Pizza and override the following methods
     def prepare(self) :
 """
 
 class Pizza :
-    name = None
-    ingredient_factory = None
-    
-    cheese = None
-    clams = None
-    dough = None
-    pepperoni = None
-    sauce = None
-    veggies = None
     
     def __init__(self, ingredient_factory) :
+        self.name = None
         self.ingredient_factory = ingredient_factory
+        self.cheese = None
+        self.clams = None
+        self.dough = None
+        self.pepperoni = None
+        self.sauce = None
+        self.veggies = None
     
     def prepare(self) :
         assert False, 'This method should be overrided.'

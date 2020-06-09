@@ -1,5 +1,4 @@
 class PizzaStore :
-    factory = None
 
     def __init__(self, factory):
         self.factory = factory

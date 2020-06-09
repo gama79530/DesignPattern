@@ -11,4 +11,21 @@ interface Pizza{
     box()
     toString()
 }
+
+class PizzaStore{
+    factory
+    orderPizza()
+}
+
+class SimplePizzaFactory{
+    createPizza()
+}
+
+PizzaStore <|-- SimplePizzaFactory
+
+Pizza <|-- CheesePizza
+Pizza <|-- ClamPizza
+Pizza <|-- PepperoniPizza
+Pizza <|-- VeggiePizza
+
 @enduml

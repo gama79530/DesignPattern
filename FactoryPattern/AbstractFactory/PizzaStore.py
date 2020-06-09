@@ -1,8 +1,6 @@
 """
-    All classes should extend PizzaStore and override the following methods
-
+    # All classes should extend PizzaStore and override the following methods
     def createPizza(self) :
-
 """
 import PizzaIngredientsFactory
 import Pizza
