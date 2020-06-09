@@ -5,8 +5,9 @@ import FlyBehavior
 import QuackBehavior
 
 class Duck :
-    fly_behavior = None
-    quack_behavior = None
+    def __init__(self) :
+        self.fly_behavior = None
+        self.quack_behavior = None
 
     def performQuack(self) :
         self.quack_behavior.quack()
@@ -20,7 +21,6 @@ class Duck :
     def display(self) :
         assert False, 'This is default Duck. You should override this method.'
     
-
 class MallardDuck(Duck) :
     def __init__(self) :
         self.quack_behavior = QuackBehavior.Quack()

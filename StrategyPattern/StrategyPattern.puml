@@ -2,11 +2,10 @@
 interface Duck{
     fly_behavior
     quack_behavior
-    __
+    
     performQuack()
     performFly()
     swim()
-    __ Abstract __
     display()
 }
 
