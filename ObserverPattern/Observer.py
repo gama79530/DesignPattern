@@ -10,10 +10,7 @@
 """
 import Subject
 
-
 class Observer :
-    subject = None
-
     def __init__(self, subject) :
         self.subject = subject
         subject.registerPushObserver(self)
@@ -21,11 +18,7 @@ class Observer :
     def update(self, subject=None) :
         assert False, 'This method should be overrided.'
 
-
 class CurrentConditionsDisplay(Observer) :
-    temperature = None
-    humidity = None
-    
     def update(self, subject=None) :
         if subject :
             self.temperature = subject.temperature
@@ -40,10 +33,12 @@ class CurrentConditionsDisplay(Observer) :
 
 
 class StatisticsDisplay(Observer) :
-    temperatures = []
-    avg_temperature = None
-    max_temperature = None
-    min_temperature = None
+    def __init__(self, subject) :
+        super().__init__(subject)
+        self.temperatures = []
+        self.avg_temperature = None
+        self.max_temperature = None
+        self.min_temperature = None
 
     def update(self, subject=None) :
         if subject :
@@ -57,12 +52,13 @@ class StatisticsDisplay(Observer) :
         self.display()
 
     def display(self) :
-        print('Avg/Max/Min temperature = {:.1f} / {:.1f} / {:.1f}'.format(self.avg_temperature, self.max_temperature, self.min_temperature))
-      
+        print('Avg/Max/Min temperature = {:.1f} / {:.1f} / {:.1f}'.format(self.avg_temperature, self.max_temperature, self.min_temperature))      
         
 class ForecastDisplay(Observer) :
-    current_pressure = 0.0
-    last_pressure = 0.0
+    def __init__(self, subject) :
+        super().__init__(subject)
+        self.current_pressure = 0.0
+        self.last_pressure = 0.0
 
     def update(self, subject=None) :
         self.last_pressure = self.current_pressure

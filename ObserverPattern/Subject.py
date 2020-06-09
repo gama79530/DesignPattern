@@ -3,9 +3,6 @@
 """
 
 class Subject :
-    pushObserver = []
-    pullObserver = []
-
     def __init__(self):
         self.pushObserver = []
         self.pullObserver = []
@@ -39,9 +36,11 @@ class Subject :
         self.notifyObserver()
 
 class WeatherData(Subject) :
-    temperature = None
-    humidity = None
-    pressure = None
+    def __init__(self):
+        super().__init__()
+        self.temperature = None
+        self.humidity = None
+        self.pressure = None
 
     def simulateChange(self, temperature, humidity, pressure) :
         self.temperature = temperature

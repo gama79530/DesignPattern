@@ -13,6 +13,19 @@ interface Observer{
     update()
 }
 
+class StatisticsDisplay{
+    temperatures
+    avg_temperature
+    max_temperature
+    min_temperature
+}
+
+class ForecastDisplay{
+    current_pressure
+    last_pressure
+}
+
+
 Subject <|-- WeatherData
 
 Observer <|-- CurrentConditionsDisplay
@@ -20,6 +33,6 @@ Observer <|-- StatisticsDisplay
 Observer <|-- ForecastDisplay
 
 Subject o-- Observer
-Observer o-- Subject : unnecessary
+Observer o-- Subject
 
 @enduml
