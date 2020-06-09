@@ -9,7 +9,6 @@ interface Subject{
 
 interface Observer{
     subject
-    __ abstract __
     update()
 }
 
