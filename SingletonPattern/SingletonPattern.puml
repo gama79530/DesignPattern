@@ -1,0 +1,12 @@
+@startuml
+
+class ChocolateBoiler{
+    empty
+    boiled
+
+    fill()
+    drain()
+    boil()
+}
+
+@enduml
