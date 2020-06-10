@@ -7,4 +7,4 @@
 1. Defining a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
 
 ## Summary
-1. Separating the difference between what stays the same and what varys needs experience.
+1. Distinguishing what stays the same and what varys relies on experience.
