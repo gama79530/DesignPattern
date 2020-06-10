@@ -4,4 +4,4 @@
 1. Classes should be open for extension, but closed for modification.
 
 ## Summary
-1. Have base objects and a lot of optional plug-in objects.
+1. The desired object is consisted by a base objects and uncertain number of plug-in objects.
