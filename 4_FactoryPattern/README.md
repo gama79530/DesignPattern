@@ -3,7 +3,6 @@
 ## Tips
 1. Depending upon abstractions. Do not depend upon concrete classes.
 
-## Summary
 1. Simple factory is an easy trick to try to separating the possible change of object instantiation.
    - Change of object instantiation is due to instancing object conditionally.
    - One kind of changing is that maybe we want to add additional types of object or delete existing types of object.
@@ -21,5 +20,7 @@ without specifying their concrete classes.
    - Client object uses Factory object to instance product object and decide how to use it.
    - Product objects are composition objects.
    - Factory object decides how to composite product object.
+
+## Summary
 
 1. Trying to composite product object and use Abstract Factory Pattern if the types of product object is very much. Otherwise, using Factory Method Pattern is easier.
