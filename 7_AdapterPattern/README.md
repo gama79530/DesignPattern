@@ -10,7 +10,7 @@
 ## Summary
 1. Adapter pattern is useful for compatibility issues which is caused by adjustment of system design.
 
-1. Adapter class can be designed to 
+1. Adapter class can be designed to :
    - Adapt multiple adaptee.
    - Adapt bidirectionally.
 
