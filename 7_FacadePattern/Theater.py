@@ -18,15 +18,15 @@ class Amplifier :
         print('{} setting volume to {}'.format(self.description, str(level)))
 
     def setTuner(self, tuner) :
-        print('{} setting tuner to {}'.format(self.description, str(self.dvd)))
+        print('{} setting tuner to {}'.format(self.description, str(tuner)))
         self.tuner = tuner
 
     def setDvd(self, dvd) :
-        print('{} setting DVD player to {}'.format(self.description, str(self.dvd)))
+        print('{} setting DVD player to {}'.format(self.description, str(dvd)))
         self.dvd = dvd
 
     def setCd(self, cd) :
-        print('{} setting cd player to {}'.format(self.description, str(self.cd)))
+        print('{} setting cd player to {}'.format(self.description, str(cd)))
         self.cd = cd
 
     def __str__(self) :
@@ -48,16 +48,16 @@ class CdPlayer :
         print("{} eject".format(self.description))
 
     def play(self, **kwargs) :
-        if kwargs['title'] :
+        if 'title' in kwargs :
             self.title = title
             self.current_track = 0
             print('{} playing "{}"'.format(self.description, self.title))
-        if kwargs['track'] :
-            if self.title :
-                self.current_track = kwargs['track']
-                print('{}  playing track {}'.format(self.description, str(self.current_track))
-            else :
+        if 'track' in kwargs :
+            if self.title is None:
                 print("{} can't play track {}, no cd inserted".format(self.description, str(self.current_track)))
+            else :
+                self.current_track = kwargs['track']
+                print('{}  playing track {}'.format(self.description, str(self.current_track)))
 
     def stop(self) :
         self.current_track = 0
@@ -86,16 +86,16 @@ class DvdPlayer :
         print("{} eject".format(self.description))
 
     def play(self, **kwargs) :
-        if kwargs['movie'] :
-            self.movie = movie
+        if 'movie' in kwargs :
+            self.movie = kwargs['movie']
             self.current_track = 0
             print('{} playing "{}"'.format(self.description, self.movie))
-        if kwargs['track'] :
-            if self.movie :
-                self.current_track = kwargs['track']
-                print('{}  playing track {} of {}'.format(self.description, str(self.current_track), str(self.movie))
-            else :
+        if 'track' in kwargs:
+            if self.movie is None:
                 print("{} can't play track {}, no dvd inserted".format(self.description, str(kwargs['track'])))
+            else :
+                self.current_track = kwargs['track']
+                print('{}  playing track {} of {}'.format(self.description, str(self.current_track), str(self.movie)))
 
     def stop(self) :
         self.current_track = 0
@@ -180,6 +180,29 @@ class TheaterLights :
 
     def tvMode(self) :
         print("{} in tv mode (4x3 aspect ratio)".format(self.description))
+
+    def __str__(self) :
+        return self.description
+
+class Tuner :
+    def __init__(self, description, amplifier):
+        self.description = description
+
+    def on(self) :
+        print("{} on".format(self.description))
+
+    def off(self) :
+        print("{} off".format(self.description))
+
+    def setFrequency(self, frequency):
+        print('{} setting frequency to {}'.format(self.description, str(frequency)))
+        self.frequency = frequency
+
+    def setAm(self) :
+        print("{} setting AM mode".format(self.description))
+
+    def setFm(self) :
+        print("{} setting FM mode".format(self.description))
 
     def __str__(self) :
         return self.description
