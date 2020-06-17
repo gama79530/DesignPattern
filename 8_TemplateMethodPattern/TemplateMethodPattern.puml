@@ -1,0 +1,22 @@
+@startuml
+class CaffeineBeverageWithHook{
+    prepareRecipe()
+    brew()
+    addCondiments()
+    boilWater()
+    pourInCup()
+    customerWantsCondiments()
+}
+
+class CoffeeWithHook{
+    getUserInput()
+}
+
+class TeaWithHook{
+    getUserInput()
+}
+
+CaffeineBeverageWithHook <|-- CoffeeWithHook
+CaffeineBeverageWithHook <|-- TeaWithHook
+
+@enduml
