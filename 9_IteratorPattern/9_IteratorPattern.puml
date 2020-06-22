@@ -1,4 +1,39 @@
 @startuml
+interface Iterator{
+    hasNext()
+    next()
+    remove()
+}
+
+interface Menu{
+    createIterator()
+}
+
+class MenuItem{
+    name
+    description
+    vegetarian
+    price
+}
+
+class Waitress{
+    printMenu()
+}
+
+Iterator <|-- CafeMenuIterator
+Iterator <|-- DinerMenuIterator
+Iterator <|-- PancakeHouseMenuIterator
+
+Menu <|-- CafeMenu
+Menu <|-- DinerMenu
+Menu <|-- PancakeHouseMenu
+
+Waitress *-- CafeMenu
+Waitress *-- DinerMenu
+Waitress *-- PancakeHouseMenu
 
 
+CafeMenu o-- MenuItem
+DinerMenu o-- MenuItem
+PancakeHouseMenu o-- MenuItem
 @enduml
