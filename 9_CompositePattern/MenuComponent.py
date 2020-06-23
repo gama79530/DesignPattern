@@ -36,8 +36,7 @@ class Menu(MenuComponent):
         return self.menu_components[i]
   
     def print(self):
-       print("\n{}".format(self.name)) 
-       print(", {}".format(self.description)) 
+       print("\n{}, {}".format(self.name, self.description)) 
        print("---------------------")
        for menu_component in self.menu_components:
            menu_component.print()
@@ -55,7 +54,7 @@ class MenuItem(MenuComponent):
         self.price = price
   
     def print(self):
-        print('  {}{}, {}'.format(self.name, ('(v)' if self.vegetarian else ''), self.price)) 
+        print('  {}{}, {}'.format(self.name, (' (v)' if self.vegetarian else ''), self.price)) 
         print('    -- {}'.format(self.description)) 
   
     def createIterator(self):

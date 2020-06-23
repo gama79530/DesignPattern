@@ -7,3 +7,4 @@
 1. Using this pattern if subset of collection is needed.
 1. Using this pattern with iterator pattern together.
 1. This pattern build a tree structure and each node is either pure node or aggregation node.
+1. Composite Pattern takes the Single Responsibility design principle and trades it for transparency.
