@@ -1,26 +1,14 @@
-# public class Waitress {
-# 	MenuComponent allMenus;
- 
-# 	public Waitress(MenuComponent allMenus) {
-# 		this.allMenus = allMenus;
-# 	}
- 
-# 	public void printMenu() {
-# 		allMenus.print();
-# 	}
-  
-# 	public void printVegetarianMenu() {
-# 		Iterator iterator = allMenus.createIterator();
+class Waitress:
+    def __init__(self, all_menus):
+        self.all_menus = all_menus
 
-# 		System.out.println("\nVEGETARIAN MENU\n----");
-# 		while (iterator.hasNext()) {
-# 			MenuComponent menuComponent = 
-# 					(MenuComponent)iterator.next();
-# 			try {
-# 				if (menuComponent.isVegetarian()) {
-# 					menuComponent.print();
-# 				}
-# 			} catch (UnsupportedOperationException e) {}
-# 		}
-# 	}
-# }
+    def printMenu(self):
+        self.all_menus.print()
+
+    def printVegetarianMenu(self):
+        iterator = self.all_menus.createIterator()
+        print("\nVEGETARIAN MENU\n----")
+        while iterator.hasNext():
+            menu_component = iterator.next()
+            if menu_component.isVegetarian():
+                menu_component.print()

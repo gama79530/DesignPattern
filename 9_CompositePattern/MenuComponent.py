@@ -36,27 +36,16 @@ class Menu(MenuComponent):
         return self.menu_components[i]
   
     def print(self):
-       pass 
-#   public void print() {
-#     System.out.println("\n" + getName());
-#     System.out.println(", " + getDescription());
-#     System.out.println("---------------------");
-    
-#     Iterator iterator = menuComponents.iterator();
-#     while (iterator.hasNext()) {
-#       MenuComponent menuComponent = (MenuComponent)iterator.next();
-#       menuComponent.print();
-#     }
-#   }
+       print("\n{}".format(self.name)) 
+       print(", {}".format(self.description)) 
+       print("---------------------")
+       for menu_component in self.menu_components:
+           menu_component.print()
   
     def createIterator(self):
-        pass
-#   public Iterator createIterator() {
-#     if (iterator == null) {
-#       iterator = new CompositeIterator(menuComponents.iterator());
-#     }
-#     return iterator;
-#   }
+        if self.iterator is None:
+            self.iterator = Iterator.CompositeIterator(Iterator.ListIterator(self.menu_components))
+        return self.iterator
 
 class MenuItem(MenuComponent):
     def __init__(self, name, description, vegetarian, price):

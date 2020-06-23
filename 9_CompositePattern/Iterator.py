@@ -4,6 +4,8 @@
     def next(self) :
     def remove(self) :
 """
+import MenuComponent
+
 class Iterator :
     def hasNext(self) :
         raise AttributeError()
@@ -21,41 +23,36 @@ class CompositeIterator(Iterator):
         
     def hasNext(self) :
         if self.stack:
-            pass
+            iterator = self.stack[-1]
+            if iterator.hasNext():
+                return True
+            else:
+                self.stack.pop()
+                return self.hasNext()
         else:
             return False  
-#   public boolean hasNext() {
-#     if (stack.empty()) {
-#       return false;
-#     }
-#     else {
-#       Iterator iterator = (Iterator)stack.peek();
-#       if (!iterator.hasNext()) {
-#         stack.pop();
-#         return hasNext();
-#       }
-#       else {
-#         return true;
-#       }
-#     }
-#   }
         
     def next(self) :
         if self.hasNext():
             iterator = self.stack[-1]
             menu_component = iterator.next()
-#   public Object next() {
-#     if (hasNext()) {
-#       Iterator iterator = (Iterator)stack.peek();
-#       MenuComponent menuComponent = (MenuComponent)iterator.next();
-#       if (menuComponent instanceof Menu) {
-#         stack.push(menuComponent.createIterator());
-#       }
-#       return menuComponent;
-#     } else {
-#         return null;
-#     }
-#   }
+            if isinstance(menu_component, MenuComponent.Menu):
+                self.stack.append(menu_component.createIterator())
+        else:
+            return None
+
+class ListIterator(Iterator):
+    def __init__(self, _list):
+        self.position = 0
+        self._list = _list
+        
+    def next(self):
+        element = self._list[self.position]
+        self.position += 1
+        return element
+
+    def hasNext(self):
+        return self.position < len(self._list)
 
 class NullIterator(Iterator):
     def next(self):
