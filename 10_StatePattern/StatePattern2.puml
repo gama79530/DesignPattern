@@ -1,0 +1,21 @@
+@startuml
+hide empty description
+
+[*] --> SoldOutState : number_gumballs = 0
+[*] --> NoQuarterState : number_gumballs > 0
+
+SoldOutState --> NoQuarterState : refill
+
+NoQuarterState --> HasQuarterState : insertQuarter
+
+HasQuarterState --> NoQuarterState : ejectQuarter
+HasQuarterState --> WinnerState : is winner and count > 1
+HasQuarterState --> SoldState : count = 1
+
+WinnerState --> SoldOutState : count = 2
+WinnerState --> NoQuarterState : count > 2
+
+SoldState --> SoldOutState : count = 1
+SoldState --> NoQuarterState : count > 1
+
+@enduml
