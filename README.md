@@ -40,11 +40,11 @@ found in real systems.
 1. **Related patterns** describes the relationship between this pattern and others.
 
 ### Ways to classification
-- Based on their purposes
-   1. **Creational** patterns involve object instantiation and all provide a way to decouple a client from the objects it needs to instantiate.
-   1. **Behavioral** Patterns are concerned with how classes and objects interact and distribute responsibility.
-   1. **Structural** patterns let you compose classes or objects into larger structures.
+1. Based on their purposes
+   - **Creational** patterns involve object instantiation and all provide a way to decouple a client from the objects it needs to instantiate.
+   - **Behavioral** Patterns are concerned with how classes and objects interact and distribute responsibility.
+   - **Structural** patterns let you compose classes or objects into larger structures.
 
-- Classified by whether or not the pattern deals with classes or objects
-   1. **Class** patterns describe how relationships between classes are defined via inheritance. Relationships in class patterns are established at compile time.
-   1. **Object** patterns describe relationships between objects and are primarily defined by composition. Relationships in object patterns are typically created at runtime and are more dynamic and flexible.
+1. Classified by whether or not the pattern deals with classes or objects
+   - **Class** patterns describe how relationships between classes are defined via inheritance. Relationships in class patterns are established at compile time.
+   - **Object** patterns describe relationships between objects and are primarily defined by composition. Relationships in object patterns are typically created at runtime and are more dynamic and flexible.
