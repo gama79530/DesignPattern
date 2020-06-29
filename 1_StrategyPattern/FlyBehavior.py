@@ -1,19 +1,12 @@
 """
-    # All classes should extend FlyBehavior and override the following or methods.
-    def fly(self) :
+    Each function performs a kind of fly behavior of duck.
 """
-class FlyBehavior :
-    def fly(self) :
-        assert False, 'This method should be overrided.' 
 
-class FlyWithWings(FlyBehavior) :
-    def fly(self) :
-        print('I\'m flying!')
+def fly_with_wings():
+    print('I\'m flying!')
 
-class FlyNoWay(FlyBehavior) :
-    def fly(self) :
-        print('I can\'t fly.')
+def fly_no_way():
+    print('I can\'t fly.')
 
-class FlyRocketPowered(FlyBehavior) :
-    def fly(self) :
-        print('I\'m flying with rocket!')
+def fly_rocket_powered():
+    print('I\'m flying with rocket!')

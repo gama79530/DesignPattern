@@ -1,18 +1,17 @@
 import Duck
 import FlyBehavior
 
-if __name__ == "__main__" :
+if __name__ == "__main__":
 
     mallard_duck = Duck.MallardDuck()
     mallard_duck.display()
-    mallard_duck.performQuack()
-    mallard_duck.performFly()
-
+    mallard_duck.quack()
+    mallard_duck.fly()
     print('----------')
-
     model_duck = Duck.ModelDuck()
     model_duck.display()
-    model_duck.performQuack()
-    model_duck.performFly()
-    model_duck.fly_behavior = FlyBehavior.FlyRocketPowered()
-    model_duck.performFly()
+    model_duck.quack()
+    model_duck.fly()
+    print('----- change fly behavior at runtime -----')
+    model_duck._fly = FlyBehavior.fly_rocket_powered
+    model_duck.fly()
