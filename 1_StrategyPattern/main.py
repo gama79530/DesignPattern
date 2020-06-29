@@ -13,5 +13,5 @@ if __name__ == "__main__":
     model_duck.quack()
     model_duck.fly()
     print('----- change fly behavior at runtime -----')
-    model_duck._fly = FlyBehavior.fly_rocket_powered
+    model_duck.fly = FlyBehavior.fly_rocket_powered
     model_duck.fly()

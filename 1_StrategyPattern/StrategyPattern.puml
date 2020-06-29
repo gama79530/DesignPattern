@@ -1,31 +1,12 @@
 @startuml
 interface Duck{
-    fly_behavior
-    quack_behavior
-    
-    performQuack()
-    performFly()
+    quack : a QuackBehavior function
+    fly : a FlyBehavior function
     swim()
-    display()
+    {abstract} display()
 }
 
-interface FlyBehavior{
-    fly()
-}
-
-interface QuackBehavior{
-    fly()
-}
-
-Duck *-- FlyBehavior
-Duck *-- QuackBehavior
-
-FlyBehavior <|-- FlyWithWings
-FlyBehavior <|-- FlyNoWay
-FlyBehavior <|-- FlyRocketPowered
-
-QuackBehavior <|-- Quack
-QuackBehavior <|-- Squack
-QuackBehavior <|-- MuteQuack
+Duck <|-- MallardDuck
+Duck <|-- ModelDuck
 
 @enduml

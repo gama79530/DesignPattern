@@ -9,9 +9,12 @@
 1. Only using a certain pattern when current problem is similar to pattern's context. 
 1. Using pattern for reusability and more clear structure.
 
-## Principle
+## Design Principle
 1. Keep it simple.
 1. Take out what you don’t really need.
+1. Identify the aspects of your application that vary and separate them from what stays the same.
+1. Program to an interface, not an implementation.
+1. Favor composition over inheritance.
 
 ## Summary
 ### What is pattern
