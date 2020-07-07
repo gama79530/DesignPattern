@@ -10,4 +10,4 @@
 1. We can encapsulate algorithm in a class and use delegation to perform behavior if the programming language does not support callable attribute.
 
 ## Summary
-1. The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+1. **The Strategy Pattern** defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.

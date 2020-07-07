@@ -1,0 +1,53 @@
+@startuml
+
+hide empty members
+
+abstract class Subject{
+    registerPushObserver(observer)
+    removePushObserver(observer)
+    registerPullObserver(observer)
+    removePullObserver(observer)
+    {abstract} notifyPushObserver()
+    notifyPullObserver()
+    notifyObserver()
+    hasChange()
+}
+
+class WeatherData{
+    temperature
+    humidity
+    simulateChange(newTemperature, newHumidity, newPressure)
+}
+
+abstract class Observer{
+    {abstract} update(*args)
+}
+
+class CurrentConditionsDisplay{
+    temperature
+    humidity
+    display()
+}
+
+class StatisticsDisplay{
+    avgTemperature
+    maxTemperature
+    minTemperature
+    display()
+}
+
+class ForecastDisplay{
+    currentPressure
+    lastPressure
+    display()
+}
+
+Subject <|-- WeatherData
+
+Observer <|-- CurrentConditionsDisplay
+Observer <|-- StatisticsDisplay
+Observer <|-- ForecastDisplay
+
+Subject "1" - "many" Observer : < register 
+
+@enduml

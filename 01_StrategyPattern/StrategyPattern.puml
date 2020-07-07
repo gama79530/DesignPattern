@@ -1,5 +1,8 @@
 @startuml
-interface Duck{
+
+hide empty members
+
+abstract class Duck{
     quack : a QuackBehavior function
     fly : a FlyBehavior function
     swim()
