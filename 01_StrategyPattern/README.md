@@ -1,7 +1,7 @@
 # Strategy Pattern (Behavioral, Object)
 
 ## Example description
-1. We want to create a duck objects family. 
+1. We want to create a **Duck** objects family. 
 1. Each kind of duck has a common behaviors, _swim_.
 1. Each kind of duck has 3 behaviors, _quack_,  _fly_ and _display_, which may perform differently.
 
