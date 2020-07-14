@@ -1,28 +1,36 @@
 @startuml
-interface Iterator{
-    hasNext()
-    next()
-    remove()
+
+hide empty members
+
+class Waitress{
+    Menu pancakeHouseMenu
+    Menu dinerMenu
+    Menu cafeMenu
+    printMenu(self, iterator=None)
 }
 
-interface Menu{
-    createIterator()
+class Menu{
+    {abstract} __iter__(self)
+}
+
+class CafeMenu{
+    addItem(self, name, description, vegetarian, price)
+}
+
+class DinerMenu{
+    addItem(self, name, description, vegetarian, price)
+}
+
+class PancakeHouseMenu{
+    addItem(self, name, description, vegetarian, price)
 }
 
 class MenuItem{
-    name
-    description
-    vegetarian
-    price
+    str name
+    str description
+    bool vegetarian
+    float price
 }
-
-class Waitress{
-    printMenu()
-}
-
-Iterator <|-- CafeMenuIterator
-Iterator <|-- DinerMenuIterator
-Iterator <|-- PancakeHouseMenuIterator
 
 Menu <|-- CafeMenu
 Menu <|-- DinerMenu
@@ -32,8 +40,8 @@ Waitress *-- CafeMenu
 Waitress *-- DinerMenu
 Waitress *-- PancakeHouseMenu
 
-
 CafeMenu o-- MenuItem
 DinerMenu o-- MenuItem
 PancakeHouseMenu o-- MenuItem
+
 @enduml

@@ -3,16 +3,19 @@ class Waitress:
         self.pancakeHouseMenu = pancakeHouseMenu
         self.dinerMenu = dinerMenu
         self.cafeMenu = cafeMenu
-    
+
     def printMenu(self, iterator=None):
         if iterator:
-            while (iterator.hasNext()):
-                menu_item = iterator.next()
-                print('{}, {} -- {}'.format(menu_item.name, menu_item.price, menu_item.description))
+            while True:
+                try:
+                    menuItem = next(iterator)
+                    print('{}, {} -- {}'.format(menuItem.name, menuItem.price, menuItem.description))
+                except StopIteration:
+                    break
         else:
-            pancakeIterator = self.pancakeHouseMenu.createIterator()
-            dinerIterator = self.dinerMenu.createIterator()
-            cafeIterator = self.cafeMenu.createIterator()
+            pancakeIterator = iter(self.pancakeHouseMenu)
+            dinerIterator = iter(self.dinerMenu)
+            cafeIterator = iter(self.cafeMenu)
             print("MENU\n----\nBREAKFAST")
             self.printMenu(pancakeIterator)
             print("\nLUNCH")
