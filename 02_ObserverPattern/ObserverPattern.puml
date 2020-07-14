@@ -3,43 +3,44 @@
 hide empty members
 
 abstract class Subject{
-    registerPushObserver(observer)
-    removePushObserver(observer)
-    registerPullObserver(observer)
-    removePullObserver(observer)
-    {abstract} notifyPushObserver()
-    notifyPullObserver()
-    notifyObserver()
-    hasChange()
+    registerPushObserver(self, observer)
+    removePushObserver(self, observer)
+    registerPullObserver(self, observer)
+    removePullObserver(self, observer)
+    {abstract} notifyPushObserver(self)
+    notifyPullObserver(self)
+    notifyObserver(self)
+    hasChange(self)
 }
 
 class WeatherData{
-    temperature
-    humidity
-    simulateChange(newTemperature, newHumidity, newPressure)
+    float temperature
+    float humidity
+    float pressure
+    simulateChange(self, newTemperature, newHumidity, newPressure)
 }
 
 abstract class Observer{
-    {abstract} update(*args)
+    {abstract} update(self, *args)
 }
 
 class CurrentConditionsDisplay{
-    temperature
-    humidity
-    display()
+    float temperature
+    float humidity
+    display(self)
 }
 
 class StatisticsDisplay{
-    avgTemperature
-    maxTemperature
-    minTemperature
-    display()
+    float avgTemperature
+    float maxTemperature
+    float minTemperature
+    display(self)
 }
 
 class ForecastDisplay{
-    currentPressure
-    lastPressure
-    display()
+    float currentPressure
+    float lastPressure
+    display(self)
 }
 
 Subject <|-- WeatherData
