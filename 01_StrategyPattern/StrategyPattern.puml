@@ -5,8 +5,8 @@ hide empty members
 abstract class Duck{
     quack : a QuackBehavior function
     fly : a FlyBehavior function
-    swim()
-    {abstract} display()
+    swim(self)
+    {abstract} display(self)
 }
 
 Duck <|-- MallardDuck
