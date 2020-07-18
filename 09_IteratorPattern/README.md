@@ -11,7 +11,7 @@
    - Implement _\_\_getitem\_\_(self, key)_ and _\_\_len\_\_(self)_ methods so that this object is also a [_Sequence_](https://docs.python.org/3/glossary.html#term-sequence) class.
 
 1. Python have 1 way to define an [_Iterator_](https://docs.python.org/3/glossary.html#term-iterator) class
-   - Implement _\_\_next\_\_(self)_ method which returns the next iterated object and _\_\_iter\_\_(self)_ which returns self.
+   - Implement _\_\_next\_\_(self)_ method which returns the next iterated object (raise the StopIteration exception if there are no further items) and _\_\_iter\_\_(self)_ which returns self.
 
 1. 2 classes of iterator
    - An **external** iterator is that the client controls the iteration by calling _next()_ to get the next element.
