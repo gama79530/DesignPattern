@@ -11,6 +11,14 @@ abstract class Duck{
     {abstract} display(self)
 }
 
+class MallardDuck{
+    display(self)
+}
+
+class ModelDuck{
+    display(self)
+}
+
 Duck <|-- MallardDuck
 Duck <|-- ModelDuck
 
