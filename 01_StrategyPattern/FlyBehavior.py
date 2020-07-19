@@ -1,12 +1,12 @@
 """
-    Each function performs a kind of fly behavior of duck.
+    Each function performs a kind of fly behavior of duck and accept 2 arguments - *args and **kwargs.
 """
 
-def fly_with_wings():
+def flyWithWings(*args, **kwargs):
     print('I\'m flying!')
 
-def fly_no_way():
+def flyNoWay(*args, **kwargs):
     print('I can\'t fly.')
 
-def fly_rocket_powered():
+def flyRocketPowered(*args, **kwargs):
     print('I\'m flying with rocket!')

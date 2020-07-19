@@ -3,8 +3,10 @@
 hide empty members
 
 abstract class Duck{
-    quack : a QuackBehavior function
-    fly : a FlyBehavior function
+    fly(*args, **kwargs)
+    quack(*args, **kwargs)
+    setFly(self, flyBehavior)
+    setQuack(self, quackBehavior)
     swim(self)
     {abstract} display(self)
 }
