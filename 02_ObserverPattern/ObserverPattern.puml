@@ -17,6 +17,7 @@ class WeatherData{
     float temperature
     float humidity
     float pressure
+    notifyPushObserver(self)
     simulateChange(self, newTemperature, newHumidity, newPressure)
 }
 
