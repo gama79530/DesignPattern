@@ -1,4 +1,4 @@
-@startuml
+@startuml StrategyPattern
 
 hide empty members
 

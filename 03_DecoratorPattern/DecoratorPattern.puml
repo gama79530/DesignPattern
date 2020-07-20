@@ -1,4 +1,4 @@
-@startuml
+@startuml DecoratorPattern
 hide empty members
 
 abstract class Beverage{
