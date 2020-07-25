@@ -15,14 +15,17 @@ class Menu{
 
 class CafeMenu{
     addItem(self, name, description, vegetarian, price)
+    __iter__(self)
 }
 
 class DinerMenu{
     addItem(self, name, description, vegetarian, price)
+    __iter__(self)
 }
 
 class PancakeHouseMenu{
     addItem(self, name, description, vegetarian, price)
+    __iter__(self)
 }
 
 class MenuItem{
