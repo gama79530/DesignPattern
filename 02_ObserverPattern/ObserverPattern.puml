@@ -29,6 +29,7 @@ class CurrentConditionsDisplay{
     float temperature
     float humidity
     display(self)
+    update(self, *args)
 }
 
 class StatisticsDisplay{
@@ -36,12 +37,14 @@ class StatisticsDisplay{
     float maxTemperature
     float minTemperature
     display(self)
+    update(self, *args)
 }
 
 class ForecastDisplay{
     float currentPressure
     float lastPressure
     display(self)
+    update(self, *args)
 }
 
 Subject <|-- WeatherData
