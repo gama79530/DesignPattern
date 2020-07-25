@@ -1,8 +1,8 @@
 # Iterator Pattern (Behavioral, Object)
 
 ## Example description
-1. We want to make an **Waitress** object which is used to integrate 3 **Menus** object which come from different restaurant so that we can print all information in these 3 **Menu** objects.
-1. Each **Menus** object aggregates lots of **MenuItem** object and is an Iterable object.
+1. We want to make an **Waitress** object which is used to integrate 3 **Menu** objects which come from different restaurant so that we can print all information in these 3 **Menu** objects.
+1. Each **Menu** object aggregates lots of **MenuItem** objects and is an _Iterable_ object.
 1. **MenuItem** object has _name_, _description_, _vegetarian_ and _price_ attributes.
 
 ## Comment
