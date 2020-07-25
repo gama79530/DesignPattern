@@ -1,0 +1,22 @@
+@startuml TemplateMethodPattern
+class CaffeineBeverageWithHook{
+    boilWater(self)
+    customerWantsCondiments(self)
+    pourInCup(self)
+    prepareRecipe(self)
+    {abstract} addCondiments(self)
+    {abstract} brew(self)
+}
+
+class CoffeeWithHook{
+    getUserInput(self)
+}
+
+class TeaWithHook{
+    getUserInput(self)
+}
+
+CaffeineBeverageWithHook <|-- CoffeeWithHook
+CaffeineBeverageWithHook <|-- TeaWithHook
+
+@enduml

@@ -17,6 +17,8 @@
 1. Favor composition over inheritance.
 1. Strive for loosely coupled designs between objects that interact.
 1. Classes should be open for extension, but closed for modification.
+<!-- ch8 -->
+1. Low-level components don't call high-level components.
 <!-- ch9 -->
 1. A class should have only one reason to change.
 

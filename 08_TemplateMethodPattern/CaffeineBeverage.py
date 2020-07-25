@@ -1,9 +1,9 @@
 """
-    # All classes should extend CaffeineBeverage and override the following or methods.
-    def brew(self) :
-    def addCondiments(self):
+    # All classes should extend CaffeineBeverage
 """
-class CaffeineBeverageWithHook :
+import abc
+
+class CaffeineBeverageWithHook(metaclass=abc.ABCMeta) :
     def prepareRecipe(self):
         self.boilWater()
         self.brew()
@@ -11,20 +11,22 @@ class CaffeineBeverageWithHook :
         if self.customerWantsCondiments():
             self.addCondiments()
 
-    def brew(self):
-        assert False, 'This method should be overrided.' 
-
-    def addCondiments(self):
-        assert False, 'This method should be overrided.' 
-
     def boilWater(self):
         print("Boiling water")
+
+    def customerWantsCondiments(self):
+        return True
 
     def pourInCup(self):
         print("Pouring into cup")
 
-    def customerWantsCondiments(self):
-        return True
+    @abc.abstractmethod
+    def addCondiments(self):
+        pass
+
+    @abc.abstractmethod
+    def brew(self):
+        pass
 
 class CoffeeWithHook(CaffeineBeverageWithHook):
     def brew(self):
