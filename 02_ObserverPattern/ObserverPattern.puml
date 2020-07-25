@@ -7,10 +7,10 @@ abstract class Subject{
     removePushObserver(self, observer)
     registerPullObserver(self, observer)
     removePullObserver(self, observer)
-    {abstract} notifyPushObserver(self)
     notifyPullObserver(self)
     notifyObserver(self)
     hasChange(self)
+    {abstract} notifyPushObserver(self)
 }
 
 class WeatherData{
