@@ -9,10 +9,14 @@ class CaffeineBeverageWithHook{
 }
 
 class CoffeeWithHook{
+    addCondiments(self)
+    brew(self)
     getUserInput(self)
 }
 
 class TeaWithHook{
+    addCondiments(self)
+    brew(self)
     getUserInput(self)
 }
 
