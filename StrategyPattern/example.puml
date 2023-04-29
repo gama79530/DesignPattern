@@ -1,0 +1,38 @@
+@startuml example
+hide empty members
+
+Class Computer{
+    CPU cpu
+    GPU gpu1
+    GPU gpu2
+
+    setCPU()
+    setGPU1()
+    setGPU2()
+
+    showInfo()
+}
+
+interface CPU{
+    showInfo()
+}
+
+interface GPU{
+    showInfo()
+}
+
+class AMD_Ryzen7_3700X{
+    showInfo()
+}
+
+class NVIDIA_GeForce_GTX_1660_SUPER{
+    showInfo()
+}
+
+Computer o-- CPU
+Computer o-- GPU
+
+CPU <|-- AMD_Ryzen7_3700X
+GPU <|-- NVIDIA_GeForce_GTX_1660_SUPER
+
+@enduml
