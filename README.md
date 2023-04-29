@@ -1,8 +1,43 @@
 # Design Pattern
  
-## Description
-1. All scenarios and designs in this project are from the book [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).  
-1. This project is Python version implementation.
+## Project說明
+這個project主要是要練習一些關於OOP設計模式的例子,採用C++, Python與Java實作，主要的知識來源是Head First Design Patterns這本書，另外也參考一些網路上的文章。
+** 目前正在慢慢重構中，有些舊的內容還沒開始重購的會先暫時留著 **
+
+
+## 設計準則
+1. 找出程式中可能需要變動之處並將它們獨立出來。  
+Identify the aspects of your application that vary and separate them from what stays the same.
+1. 針對介面寫程式而非針對實作而寫。  
+Program to an interface, not an implementation.
+1. 多用合成，少用繼承。  
+Favor composition over inheritance.
+
+## 模式分類
+### 根據目標分類
+1. **生成模式 (Creational patterns)**
+   - 生成模式牽涉到物件實體化，這類模式都提供一個方式將client端程式從它需要的物件的實體化過程中鬆綁。  
+   Creational patterns involve object instantiation and all provide a way to decouple a client from the objects it needs to instantiate.
+1. **行為模式 (Behavioral Pattern)**
+   - 行為模式重點在類別與物間之間的互動以及各自的責任。  
+   Any pattern that is a Behavioral Pattern is concerned with how classes and objects interact and distribute responsibility.
+1. **結構模式 (Structural patterns)**
+   - 結構模式使programmer可以將物件組合成更大的結構。  
+   Structural patterns let you compose classes or objects into larger structures. 
+
+### 根據模式處理的對象
+1. **類別模式 (Class patterns)**
+   - 類別模式藉由介面描述類別之間的關係。類別之間的關係是在編譯期建立的。  
+   Class patterns describe how relationships between classes are defined via inheritance. Relationships in class patterns are established at compile time.
+1. **物件模式 (Object patterns)**
+   - 物件模式描述了物件之間的關係且主要是藉由合成定義。 物件之間的關係通常是在執行期建立且更動態與更彈性。  
+   Object patterns describe relationships between objects and are primarily defined by composition. Relationships in object patterns are typically created at runtime and are more dynamic and flexible.
+
+
+## Reference
+1. [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).
+
+------
 
 ## Comment
 1. As time passing, the problem may not be the same as the original.
@@ -12,9 +47,6 @@
 ## Design Principle
 1. Keep it simple.
 1. Take out what you don’t really need.
-1. Identify the aspects of your application that vary and separate them from what stays the same.
-1. Program to an interface, not an implementation.
-1. Favor composition over inheritance.
 1. Strive for loosely coupled designs between objects that interact.
 1. Classes should be open for extension, but closed for modification.
 <!-- ch3 -->
@@ -48,13 +80,3 @@ objects in the design. This section describes their responsibilities and roles i
 1. **Known uses** describes examples of this pattern
 found in real systems.
 1. **Related patterns** describes the relationship between this pattern and others.
-
-### Ways to classification
-1. Based on their purposes
-   - **Creational** patterns involve object instantiation and all provide a way to decouple a client from the objects it needs to instantiate.
-   - **Behavioral** Patterns are concerned with how classes and objects interact and distribute responsibility.
-   - **Structural** patterns let you compose classes or objects into larger structures.
-
-1. Classified by whether or not the pattern deals with classes or objects
-   - **Class** patterns describe how relationships between classes are defined via inheritance. Relationships in class patterns are established at compile time.
-   - **Object** patterns describe relationships between objects and are primarily defined by composition. Relationships in object patterns are typically created at runtime and are more dynamic and flexible.
