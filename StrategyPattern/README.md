@@ -24,4 +24,4 @@ The Strategy Pattern defines a family of algorithms, encapsulates each one, and 
 ## 心得
 1. 設計模式與程式碼的整理擺放沒有很直接的相關，但並非完全無關
 1. 如何將可以變動更換的部分與可以固定的部分切開需要靠經驗
-1. 
+

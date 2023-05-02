@@ -12,6 +12,9 @@ Identify the aspects of your application that vary and separate them from what s
 Program to an interface, not an implementation.
 1. 多用合成，少用繼承。  
 Favor composition over inheritance.
+1. 盡量鬆綁有互動的物件之間的關係  
+Strive for loosely coupled designs between objects that interact.
+
 
 ## 模式分類
 ### 根據目標分類
@@ -47,7 +50,6 @@ Favor composition over inheritance.
 ## Design Principle
 1. Keep it simple.
 1. Take out what you don’t really need.
-1. Strive for loosely coupled designs between objects that interact.
 1. Classes should be open for extension, but closed for modification.
 <!-- ch3 -->
 <!-- ch8 -->

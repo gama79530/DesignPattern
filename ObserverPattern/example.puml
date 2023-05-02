@@ -1,0 +1,44 @@
+@startuml example
+hide empty members
+
+
+interface Streamer{
+    registerObserver()
+    removeObserver()
+    notifyObserver()
+    getAccountInfo()
+    setAccountInfo()
+    getIsStreaming()
+    setIsStreaming()
+}
+
+interface Audience{
+    update()
+}
+
+class TwitchStreamer{
+    registerObserver()
+    removeObserver()
+    notifyObserver()
+    getAccountInfo()
+    setAccountInfo()
+    getIsStreaming()
+    setIsStreaming()
+}
+
+class TwitchAudience{
+    update()
+    equals()
+    getAccountID()
+    setAccountID()
+    getNickname()
+    setNickname()
+}
+
+Streamer <|-- TwitchStreamer
+Audience <|-- TwitchAudience
+
+Streamer "1" - "0..*" Audience : < register 
+
+@enduml
+

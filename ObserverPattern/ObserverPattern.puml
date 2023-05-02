@@ -1,0 +1,38 @@
+@startuml ObserverPattern
+hide empty members
+
+interface Subject{
+    registerObserver()
+    removeObserver()
+    notifyObserver()
+}
+
+interface Observer{
+    update()
+}
+
+class ConcreteSubject{
+    registerObserver()
+    removeObserver()
+    notifyObserver()
+}
+
+class ConcreteObserver1{
+    update()
+}
+
+class ConcreteObserver2{
+    update()
+}
+
+class ConcreteObserver3{
+    update()
+}
+
+Subject <|-- ConcreteSubject
+Observer <|-- ConcreteObserver1
+Observer <|-- ConcreteObserver2
+Observer <|-- ConcreteObserver3
+
+Subject "1" - "0..*" Observer : < register 
+@enduml
