@@ -1,0 +1,40 @@
+@startuml DecoratorPattern
+hide empty members
+
+interface Component{
+    methodA()
+} 
+
+interface BaseComponent{
+    methodA()
+}
+
+class ConcreteComponentA{
+    methodA()
+}
+
+class ConcreteComponentB{
+    methodA()
+}
+
+interface Decorator{
+    methodA()
+}
+
+class  ConcreteDecoratorA{
+    methodA()
+}
+
+class  ConcreteDecoratorB{
+    methodA()
+}
+
+Component <|-- BaseComponent
+BaseComponent <|-- ConcreteComponentA
+BaseComponent <|-- ConcreteComponentB
+
+Component <|-- Decorator
+Decorator <|-- ConcreteDecoratorA
+Decorator <|-- ConcreteDecoratorB
+
+@enduml

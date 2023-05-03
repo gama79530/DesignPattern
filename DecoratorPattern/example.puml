@@ -1,0 +1,54 @@
+@startuml example
+hide empty members
+
+interface Beverage{
+    getPrice()
+    getgetCost()
+    getProfit()
+} 
+
+interface Coffee{
+    getPrice()
+    getCost()
+    getProfit()
+}
+
+class HouseBlend{
+    getPrice()
+    getCost()
+    getProfit()
+}
+
+class DarkRoast{
+    getPrice()
+    getCost()
+    getProfit()
+}
+
+interface Condiment{
+    getPrice()
+    getCost()
+    getProfit()
+}
+
+class Milk{
+    getPrice()
+    getCost()
+    getProfit()
+}
+
+class Mocha{
+    getPrice()
+    getCost()
+    getProfit()
+}
+
+Beverage <|-- Coffee
+Coffee <|-- HouseBlend
+Coffee <|-- DarkRoast
+
+Beverage <|-- Condiment
+Condiment <|-- Milk
+Condiment <|-- Mocha
+
+@enduml

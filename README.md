@@ -1,8 +1,10 @@
 # Design Pattern
  
 ## Project說明
-這個project主要是要練習一些關於OOP設計模式的例子,採用C++, Python與Java實作，主要的知識來源是Head First Design Patterns這本書，另外也參考一些網路上的文章。
-** 目前正在慢慢重構中，有些舊的內容還沒開始重購的會先暫時留著 **
+1. 這個project主要是要練習一些關於OOP設計模式的例子,採用Python與Java實作，主要的知識來源是Head First Design Patterns這本書，另外也參考一些網路上的文章。
+2. 所有UML都是以Java為基準去畫，其他程式語言的實作可能會因應程式語言的特性而做些微調整
+
+** 目前正在慢慢重構中，有些舊的內容還沒開始重構的會先暫時留著 **
 
 
 ## 設計準則
@@ -14,6 +16,8 @@ Program to an interface, not an implementation.
 Favor composition over inheritance.
 1. 盡量鬆綁有互動的物件之間的關係  
 Strive for loosely coupled designs between objects that interact.
+1. 類別要對擴充開放，對修改內容關閉  
+Classes should be open for extension, but closed for modification.
 
 
 ## 模式分類
@@ -50,8 +54,6 @@ Strive for loosely coupled designs between objects that interact.
 ## Design Principle
 1. Keep it simple.
 1. Take out what you don’t really need.
-1. Classes should be open for extension, but closed for modification.
-<!-- ch3 -->
 <!-- ch8 -->
 1. Low-level components don't call high-level components.
 <!-- ch9 -->

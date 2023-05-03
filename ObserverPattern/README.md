@@ -23,6 +23,6 @@ The Observer Pattern defines a one-to-many dependency between objects so that wh
 我們模擬一個訂閱系統。Subject物件代表一個實況主，Observer物件代表各個訂閱用戶。每當實況主開實況時便會發送主動通知訊息。本範例採用push的方式推播資訊。
 
 
-## 心得
+## 其它
 1. 這個模式經常被運用在GUI的Listener上，用來實作監控GUI元件觸發某事件時的反應。GUI元件是個Subject物件，用來對事件做反應動作的Listener是個Observer物件
 2. 如果實作觀察者模式的方式很固定也可以直接提供抽象類別或者實作類別而不是提供介面，但這會稍微犧牲程式的彈性(Java內建的Observable就是使用這種方式)
