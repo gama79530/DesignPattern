@@ -1,4 +1,4 @@
-from .. import Beverage
+from . import Beverage
 
 class Condiment(Beverage):
     def __init__(self, beverage:Beverage) -> None:

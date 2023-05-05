@@ -5,7 +5,7 @@ The Observer Pattern defines a one-to-many dependency between objects so that wh
 
 ## 分類
 1. 行為模式 (Behavioral pattern)
-   - 重點在可以主動通知收到某一物件改變狀態
+   - 重點在可以**主動通知**收到某一物件改變狀態
 1. 物件模式 (Object pattern)
    - 藉由合成建立Subject與Observer之間的關係
    - 可以在執行期隨意建立Subject與Observer關係
