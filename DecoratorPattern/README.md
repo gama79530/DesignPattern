@@ -22,4 +22,4 @@ The Decorator Pattern attaches additional responsibilities to an object dynamica
 1. 這個模式與策略模式最大的不同是外掛功能的數量並不固定，若外掛功能數量有明確上限的話也可以採用策略模式的做法
 1. 外掛的功能之間可能會有執行順序的差異但對於執行結果應該盡量避免有執行順序的相依性，最常見的範例就是BaseComponent有某種數值(ex:價錢、戰鬥力等等)可以受Decorator影響而增減數值。
 1. java.io的設計上大量採用這種模式進行設計
-1. python有提供特Decorator的語法糖讓本模式的實作更簡潔
+1. python有提供特Decorator的語法糖，但該語法被限制只能用callable object來實現Decorator，並且只能將Decorator套在function object上

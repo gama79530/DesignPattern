@@ -1,6 +1,3 @@
-from . import CPU
-from . import GPU
-
 class Computer:
     def __init__(self) -> None:
         self.cpu = None

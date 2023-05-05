@@ -30,4 +30,3 @@ class TwitchAudience(Audience):
     @nickname.setter
     def nickname(self, val):
         self._nickname = val
-    

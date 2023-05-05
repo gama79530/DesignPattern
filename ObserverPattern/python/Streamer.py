@@ -36,22 +36,19 @@ class Streamer(metaclass=abc.ABCMeta):
 
 class TwitchStreamer(Streamer):
     def __init__(self, account_info) -> None:
-        # super().__init__()
-        self._audience = dict()
+        self._audience = set()
         self._account_info = account_info
         self._is_streaming = False
 
     def registerObserver(self, observer):
-        if not observer.accountID in self._audience:
-            self._audience[observer.accountID] = observer
+        self._audience.add(observer)
         
     def removeObserver(self, observer):
-        if observer.accountID in self._audience:
-            del self._audience[observer.accountID]
+        self._audience.discard(observer)
 
     def notifyObserver(self):
         stream_info = f"Streamer {self.account_info} is streaming now." if self.is_streaming else f"Streamer {self.account_info} is off-stream now."
-        for _, observer in self._audience.items():
+        for observer in self._audience:
             observer.update(stream_info)
 
     @property

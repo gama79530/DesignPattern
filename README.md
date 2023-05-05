@@ -1,8 +1,8 @@
 # Design Pattern
  
 ## Project說明
-1. 這個project主要是要練習一些關於OOP設計模式的例子,採用Python與Java實作，主要的知識來源是Head First Design Patterns這本書，另外也參考一些網路上的文章。
-2. 所有UML都是以Java為基準去畫，其他程式語言的實作可能會因應程式語言的特性而做些微調整
+1. 這個project主要是要練習一些關於OOP設計模式的例子,提供了C++、Java與Python實作，主要的知識來源是Head First Design Patterns這本書，另外也參考一些網路上的文章。
+2. 所有UML與範例都是以Java為基準，其他程式語言的實作可能會因應程式語言的特性而做些微調整
 
 ** 目前正在慢慢重構中，有些舊的內容還沒開始重構的會先暫時留著 **
 

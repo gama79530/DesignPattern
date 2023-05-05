@@ -23,3 +23,4 @@ if __name__ == '__main__':
     print("Streamer remove anti-fan and start streaming:")
     streamer.removeObserver(anti_fan)
     streamer.is_streaming = True
+

@@ -1,4 +1,6 @@
 import Computer
+import Computer.CPU
+import Computer.GPU
 
 if __name__ == '__main__':
     computer = Computer.Computer()

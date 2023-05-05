@@ -3,14 +3,12 @@ import ObserverPattern.java_.Audience.Audience;
 import java.util.*;
 
 public class TwitchStreamer implements Streamer{
-    private Set<Audience> audience;
+    private Set<Audience> audience = new HashSet<>();
     private String accountInfo;
-    private boolean isStreaming;
+    private boolean isStreaming = false;
 
     public TwitchStreamer(String accountInfo) {
-        this.audience = new HashSet<>();
         this.accountInfo = accountInfo;
-        this.isStreaming = false;
     }
 
     @Override
