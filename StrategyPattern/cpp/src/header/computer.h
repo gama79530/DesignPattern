@@ -6,11 +6,11 @@
 class Computer{
 public:
     CPU& getCpu(){return *cpu;}
-    void setCpu(CPU* cpu){this->cpu = cpu;}
+    void setCpu(CPU& cpu){this->cpu = &cpu;}
     GPU& getGpu1(){return *gpu1;}
-    void setGpu1(GPU* gpu){this->gpu1 = gpu;}
+    void setGpu1(GPU& gpu){this->gpu1 = &gpu;}
     GPU& getGpu2(){return *gpu2;}
-    void setGpu2(GPU* gpu){this->gpu2 = gpu;}
+    void setGpu2(GPU& gpu){this->gpu2 = &gpu;}
     void showInfo();
     
 private:
