@@ -1,0 +1,37 @@
+@startuml FactoryMethodPattern
+hide empty members
+
+abstract class Creator{
+    {abstract}factoryMethod()
+    otherMethod()
+}
+
+class ConcreteCreator1{
+    factoryMethod()
+    otherMethod()
+}
+
+class ConcreteCreator2{
+    factoryMethod()
+    otherMethod()
+}
+
+interface Product{
+    anyProductMethod()
+}
+
+class ConcreteProduct1{
+    anyProductMethod()
+}
+
+class ConcreteProduct2{
+    anyProductMethod()
+}
+
+Creator <|-- ConcreteCreator1
+Creator <|-- ConcreteCreator2
+Product <|-- ConcreteProduct1
+Product <|-- ConcreteProduct2
+
+Creator - Product : > produce 
+@enduml

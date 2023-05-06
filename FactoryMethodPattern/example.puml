@@ -1,0 +1,52 @@
+@startuml example
+hide empty members
+
+abstract class PizzaStore{
+    {abstract}createPizza()
+    orderPizza()
+}
+
+class PizzaStoreA{
+    createPizza()
+    orderPizza()
+}
+
+class PizzaStoreB{
+    createPizza()
+    orderPizza()
+}
+
+interface Pizza{
+    getPrice()
+    getRadius()
+    setRadius()
+}
+
+class CheesePizza{
+    getPrice()
+    getRadius()
+    setRadius()
+}
+
+class PepperoniPizza{
+    getPrice()
+    getRadius()
+    setRadius()
+}
+
+class VeggiePizza{
+    getPrice()
+    getRadius()
+    setRadius()
+}
+
+PizzaStore <|-- PizzaStoreA
+PizzaStore <|-- PizzaStoreB
+Pizza <|-- CheesePizza
+Pizza <|-- VeggiePizza
+Pizza <|-- PepperoniPizza
+
+PizzaStore - Pizza : > produce 
+
+@enduml
+
