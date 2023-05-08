@@ -5,11 +5,11 @@ import AbstractFactoryPattern.java_.PizzaStore.Ingredient.Cheese;
 import AbstractFactoryPattern.java_.PizzaStore.Ingredient.Ingredient;
 import AbstractFactoryPattern.java_.PizzaStore.IngredientFactory.IngredientFactory;
 
-public class CheesePizzeOfStoreA implements CheesePizza{
+public class CheesePizzaOfStoreA implements CheesePizza{
     private List<Ingredient> ingredients = new ArrayList<>();
     private Cheese cheese = null;
 
-    public CheesePizzeOfStoreA(IngredientFactory ingredientFactory) {
+    public CheesePizzaOfStoreA(IngredientFactory ingredientFactory) {
         ingredients.add(ingredientFactory.createDough());
         cheese = ingredientFactory.createCheese();
     }

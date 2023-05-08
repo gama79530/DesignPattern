@@ -19,7 +19,7 @@ public class PizzaStoreA implements PizzaStore{
     @Override
     public Pizza orderPizza(PizzaType pizzaType) {
         if(pizzaType == PizzaType.CHEESE_PIZZA){
-            return new CheesePizzeOfStoreA(ingredientFactory);
+            return new CheesePizzaOfStoreA(ingredientFactory);
         }
 
         return null;
