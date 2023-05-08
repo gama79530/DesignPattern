@@ -10,8 +10,8 @@ int main(){
     TwitchAudience godToneFan(accountNo++, "Tommy");
     TwitchAudience antiFan(accountNo++, "Diabetic Audiance");
 
-    streamer.registerObserver(godToneFan);
-    streamer.registerObserver(antiFan);
+    streamer.registerObserver(&godToneFan);
+    streamer.registerObserver(&antiFan);
 
     cout << "Streamer is streaming:" << endl;
     streamer.setIsStreaming(true);
@@ -23,7 +23,7 @@ int main(){
     cout << endl;
 
     cout << "Streamer remove anti-fan and start streaming:" << endl;
-    streamer.removeObserver(antiFan);
+    streamer.removeObserver(&antiFan);
     streamer.setIsStreaming(true);
 
     return 0;

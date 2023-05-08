@@ -2,13 +2,14 @@ import abc
 
 class Beverage(metaclass=abc.ABCMeta):
     @abc.abstractmethod
-    def get_price(self):
+    def getPrice(self):
         return NotImplemented
     
     @abc.abstractmethod
-    def get_cost(self):
+    def getCost(self):
         return NotImplemented
     
-    @abc.abstractmethod
-    def get_profit(self):
-        return NotImplemented
+    def getProfit(self):
+        return self.getPrice() - self.getCost()
+
+

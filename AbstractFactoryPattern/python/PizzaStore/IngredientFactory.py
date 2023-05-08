@@ -35,3 +35,5 @@ class IngredientFactoryOfStoreB(IngredientFactory):
     
     def createPepperoni(self):
         return SlicedPepperoni()
+
+

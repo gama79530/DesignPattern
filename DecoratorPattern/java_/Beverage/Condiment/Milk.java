@@ -23,4 +23,14 @@ public class Milk implements Condiment{
     public int getProfit() {
         return getPrice() - getCost();
     }
+
+    @Override
+    public Beverage getBeverage() {
+        return beverage;
+    }
+
+    @Override
+    public void setBeverage(Beverage beverage) {
+        this.beverage = beverage;
+    }
 }

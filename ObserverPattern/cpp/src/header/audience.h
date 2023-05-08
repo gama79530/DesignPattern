@@ -12,16 +12,10 @@ public:
 
 class TwitchAudience: public Audience{
 public:
-    TwitchAudience(int accountID, string nickname);
-    void update(string streamInfo);
-    int getAccountID(){return accountID;}
-    void setAccountID(int accountID){this->accountID = accountID;}
-    string getNickname(){return nickname;}
-    void setNickname(string nickname){this->nickname = nickname;}
-
-private:
     int accountID;
     string nickname;
+    TwitchAudience(int accountID, string nickname);
+    void update(string streamInfo);
 };
 
 #endif

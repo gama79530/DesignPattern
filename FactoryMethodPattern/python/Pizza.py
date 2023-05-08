@@ -2,28 +2,20 @@ import abc
 from enum import Enum
 
 class PizzaType(Enum):
-    CheesePizza = "cheese flavor pizza"
-    PepperoniPizza = "pepperoni flavor pizza"
-    VeggiePizza = "veggie flavor pizza"
+    CHEESE_PIZZA = "cheese flavor pizza"
+    PEPPERONI_PIZZA = "pepperoni flavor pizza"
+    VEGGIE_PIZZA = "veggie flavor pizza"
 
 
 class Pizza:
     def __init__(self, radius) -> None:
-        self._radius = radius
+        self.radius = radius
 
     @property
     @abc.abstractmethod
     def price(self):
         return NotImplemented
     
-    @property
-    def radius(self):
-        return self._radius
-    
-    @radius.setter
-    def radius(self, val):
-        self._radius = val
-
 
 class CheesePizza(Pizza):
     def __init__(self, radius) -> None:
@@ -31,7 +23,7 @@ class CheesePizza(Pizza):
 
     @property
     def price(self):
-        return (self._radius**2) * 10
+        return (self.radius**2) * 10
 
 
 class PepperoniPizza(Pizza):
@@ -40,7 +32,7 @@ class PepperoniPizza(Pizza):
 
     @property
     def price(self):
-        return (self._radius**2) * 20
+        return (self.radius**2) * 20
 
 
 class VeggiePizza(Pizza):
@@ -49,6 +41,6 @@ class VeggiePizza(Pizza):
 
     @property
     def price(self):
-        return (self._radius**2) * 15
+        return (self.radius**2) * 15
 
 

@@ -4,10 +4,11 @@ hide empty members
 
 interface Streamer{
     String accountInfo
-    boolean isStreaming
     registerObserver()
     removeObserver()
     notifyObserver()
+    getIsStreaming()
+    setIsStreaming()
 }
 
 interface Audience{
@@ -16,10 +17,11 @@ interface Audience{
 
 class TwitchStreamer{
     String accountInfo
-    boolean isStreaming
     registerObserver()
     removeObserver()
     notifyObserver()
+    getIsStreaming()
+    setIsStreaming()
 }
 
 class TwitchAudience{

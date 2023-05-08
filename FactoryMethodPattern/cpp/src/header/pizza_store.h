@@ -4,7 +4,7 @@
 
 class PizzaStore{
 public:
-    void orderPizza(PizzaType type, int radius);
+    Pizza* orderPizza(PizzaType type, int radius);
 
 protected:
     virtual Pizza* createPizza(PizzaType type, int radius) = 0;

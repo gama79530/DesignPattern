@@ -13,14 +13,14 @@ if __name__ == '__main__':
     streamer.registerObserver(anti_fan)
 
     print("Streamer is streaming:")
-    streamer.is_streaming = True
+    streamer.isStreaming = True
     print()
 
     print("Streamer is off-stream:")
-    streamer.is_streaming = False
+    streamer.isStreaming = False
     print()
 
     print("Streamer remove anti-fan and start streaming:")
     streamer.removeObserver(anti_fan)
-    streamer.is_streaming = True
+    streamer.isStreaming = True
 

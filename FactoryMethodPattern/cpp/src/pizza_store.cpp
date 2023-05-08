@@ -3,13 +3,15 @@
 
 using namespace std;
 
-void PizzaStore::orderPizza(PizzaType type, int radius){
+Pizza* PizzaStore::orderPizza(PizzaType type, int radius){
     Pizza* pizza = createPizza(type, radius);
     if(pizza == nullptr){
         cout << "The " << pizzaTypeToString(type) << " is not provided !!!" << endl;
     }else{
         cout << "The " << pizzaTypeToString(type) << " is provided. The radius of pizza is " << pizza->radius << " and the price of pizza is " << pizza->getPrice() << endl;
     }
+
+    return pizza;
 }
 
 Pizza* PizzaStoreA::createPizza(PizzaType type, int radius){

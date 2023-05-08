@@ -13,23 +13,22 @@ class PizzaStore:
         else:
             print(f"The {type.value} is provided. The radius of pizza is {radius} and the price of pizza is {pizza.price}")
 
+        return pizza
+
+
 class PizzaStoreA(PizzaStore):
     def createPizza(self, type:Pizza.PizzaType, radius:int) -> Pizza.Pizza:
-        if type == Pizza.PizzaType.CheesePizza:
+        if type == Pizza.PizzaType.CHEESE_PIZZA:
             return Pizza.CheesePizza(radius)
-        elif type == Pizza.PizzaType.PepperoniPizza:
+        elif type == Pizza.PizzaType.PEPPERONI_PIZZA:
             return Pizza.PepperoniPizza(radius)
-        else:
-            return None
     
 
 class PizzaStoreB(PizzaStore):
     def createPizza(self, type:Pizza.PizzaType, radius:int) -> Pizza.Pizza:
-        if type == Pizza.PizzaType.CheesePizza:
+        if type == Pizza.PizzaType.CHEESE_PIZZA:
             return Pizza.CheesePizza(radius)
-        elif type == Pizza.PizzaType.VeggiePizza:
+        elif type == Pizza.PizzaType.VEGGIE_PIZZA:
             return Pizza.VeggiePizza(radius)
-        else:
-            return None
-        
 
+        

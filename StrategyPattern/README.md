@@ -22,6 +22,7 @@ The Strategy Pattern defines a family of algorithms, encapsulates each one, and 
 
 ## C++相關
 1. 因為C++有function pointer可以使用，因此演算法也可以使用function與function pointer來搭配完成合成
+2. Aggregation member用指標(要處理deconstructor)，Composition用Refference會比較好操作。
 1. 範例編譯&執行指令  
 cd StrategyPattern/cpp/  
 g++ main.cpp src/computer.cpp src/GPU.cpp src/CPU.cpp -o main  
