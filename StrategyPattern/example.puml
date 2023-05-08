@@ -5,11 +5,6 @@ Class Computer{
     CPU cpu
     GPU gpu1
     GPU gpu2
-
-    setCPU()
-    setGPU1()
-    setGPU2()
-
     showInfo()
 }
 

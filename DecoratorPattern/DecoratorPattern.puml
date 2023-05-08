@@ -18,14 +18,17 @@ class ConcreteComponentB{
 }
 
 interface Decorator{
+    Component component
     methodA()
 }
 
 class  ConcreteDecoratorA{
+    Component component
     methodA()
 }
 
 class  ConcreteDecoratorB{
+    Component component
     methodA()
 }
 

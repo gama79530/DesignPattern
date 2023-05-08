@@ -17,27 +17,23 @@ class PizzaStoreB{
 }
 
 interface Pizza{
+    int radius
     getPrice()
-    getRadius()
-    setRadius()
 }
 
 class CheesePizza{
+    int radius
     getPrice()
-    getRadius()
-    setRadius()
 }
 
 class PepperoniPizza{
+    int radius
     getPrice()
-    getRadius()
-    setRadius()
 }
 
 class VeggiePizza{
+    int radius
     getPrice()
-    getRadius()
-    setRadius()
 }
 
 PizzaStore <|-- PizzaStoreA

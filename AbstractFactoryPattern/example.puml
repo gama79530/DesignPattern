@@ -1,0 +1,130 @@
+@startuml example
+hide empty members
+
+interface Ingredient{
+    getInfo()
+}
+
+interface Dough{
+    getInfo()
+}
+
+class ThickCrustDough{
+    getInfo()
+}
+
+class ThinCrustDough{
+    getInfo()
+}
+
+interface Cheese{
+    getInfo()
+}
+
+class ReggianoCheese{
+    getInfo()
+}
+
+class MozzarellaCheese{
+    getInfo()
+}
+
+
+interface Pepperoni{
+    getInfo()
+}
+
+class SlicedPepperoni{
+    getInfo()
+}
+
+interface Pizza{
+    List<Ingredient> ingredients
+    getName()
+    showIngredients()
+}
+
+interface CheesePizza{
+    List<Ingredient> ingredients
+    Cheese cheese 
+    getName()
+    showIngredients()
+}
+
+class CheesePizzaOfStoreA{
+    List<Ingredient> ingredients
+    Cheese cheese 
+    getName()
+    showIngredients()
+}
+
+
+class CheesePizzaOfStoreB{
+    List<Ingredient> ingredients
+    Cheese cheese 
+    getName()
+    showIngredients()
+}
+
+interface IngredientFactory{
+    createDough()
+    createCheese()
+    createPepperoni()
+}
+
+class IngredientFactoryOfStoreA{
+    createDough()
+    createCheese()
+    createPepperoni()
+}
+
+class IngredientFactoryOfStoreB{
+    createDough()
+    createCheese()
+    createPepperoni()
+}
+
+abstract class PizzaStore{
+    IngredientFactory ingredientFactory
+    orderPizza()
+}
+
+class PizzaStoreA{
+    IngredientFactory ingredientFactory
+    orderPizza()
+}
+
+class PizzaStoreB{
+    IngredientFactory ingredientFactory
+    orderPizza()
+}
+
+Ingredient <|-- Dough
+Ingredient <|-- Cheese
+Ingredient <|-- Pepperoni
+
+Dough <|-- ThickCrustDough
+Dough <|-- ThinCrustDough
+
+Cheese <|-- ReggianoCheese
+Cheese <|-- MozzarellaCheese
+
+Pepperoni <|-- SlicedPepperoni
+
+Pizza <|-- CheesePizza
+
+CheesePizza <|-- CheesePizzaOfStoreA
+CheesePizza <|-- CheesePizzaOfStoreB
+
+IngredientFactory <|-- IngredientFactoryOfStoreA
+IngredientFactory <|-- IngredientFactoryOfStoreB
+
+PizzaStore <|-- PizzaStoreA
+PizzaStore <|-- PizzaStoreB
+
+IngredientFactory - Ingredient : > produce
+Pizza *-left- Ingredient 
+PizzaStore *- IngredientFactory
+
+@enduml
+

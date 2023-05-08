@@ -3,13 +3,11 @@ hide empty members
 
 
 interface Streamer{
+    String accountInfo
+    boolean isStreaming
     registerObserver()
     removeObserver()
     notifyObserver()
-    getAccountInfo()
-    setAccountInfo()
-    getIsStreaming()
-    setIsStreaming()
 }
 
 interface Audience{
@@ -17,22 +15,18 @@ interface Audience{
 }
 
 class TwitchStreamer{
+    String accountInfo
+    boolean isStreaming
     registerObserver()
     removeObserver()
     notifyObserver()
-    getAccountInfo()
-    setAccountInfo()
-    getIsStreaming()
-    setIsStreaming()
 }
 
 class TwitchAudience{
+    accountID
+    nickname
     update()
     equals()
-    getAccountID()
-    setAccountID()
-    getNickname()
-    setNickname()
 }
 
 Streamer <|-- TwitchStreamer

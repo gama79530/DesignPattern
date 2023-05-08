@@ -26,18 +26,21 @@ class DarkRoast{
 }
 
 interface Condiment{
+    Beverage beverage
     getPrice()
     getCost()
     getProfit()
 }
 
 class Milk{
+    Beverage beverage
     getPrice()
     getCost()
     getProfit()
 }
 
 class Mocha{
+    Beverage beverage
     getPrice()
     getCost()
     getProfit()

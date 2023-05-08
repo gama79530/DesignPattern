@@ -9,12 +9,20 @@ class PizzaType(Enum):
 
 class Pizza:
     def __init__(self, radius) -> None:
-        self.radius = radius
+        self._radius = radius
 
     @property
     @abc.abstractmethod
     def price(self):
         return NotImplemented
+    
+    @property
+    def radius(self):
+        return self._radius
+    
+    @radius.setter
+    def radius(self, val):
+        self._radius = val
 
 
 class CheesePizza(Pizza):
@@ -23,7 +31,7 @@ class CheesePizza(Pizza):
 
     @property
     def price(self):
-        return (self.radius**2) * 10
+        return (self._radius**2) * 10
 
 
 class PepperoniPizza(Pizza):
@@ -32,7 +40,7 @@ class PepperoniPizza(Pizza):
 
     @property
     def price(self):
-        return (self.radius**2) * 20
+        return (self._radius**2) * 20
 
 
 class VeggiePizza(Pizza):
@@ -41,6 +49,6 @@ class VeggiePizza(Pizza):
 
     @property
     def price(self):
-        return (self.radius**2) * 15
+        return (self._radius**2) * 15
 
 

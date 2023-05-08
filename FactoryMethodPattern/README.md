@@ -11,7 +11,7 @@ The Factory Method Pattern defines an interface for creating an object, but lets
 
 
 ## UML解釋
-1. Creator物件負責規範Product物件的生成，實作細節由各個子類別處理
+1. Creator物件藉由factoryMethod負責規範Product物件的生成，實作細節由各個子類別處理
 
 
 ## 範例描述
@@ -26,5 +26,6 @@ g++ main.cpp src/pizza.cpp src/pizza_store.cpp -o main
 
 
 ## 其它
-1. 這個方法只適用於物件的實體化不需要大量合成，若物件實體化需要大量合成則採用抽象工廠模式
-1. 有點像是把樣板方法模式套用到物件實體化上
+1. 這個模式比較適用於實體化時不需要大量合成的物件，若物件實體化需要大量合成則採用抽象工廠模式。通常具有這種特性的物件是屬於比較低階的基本類別。
+1. 工廠方法未必要定義成抽象方法，也可以定義成普通方法並提供一套預設的實作。
+1. 有點像是把樣板方法模式套用到物件實體化上。

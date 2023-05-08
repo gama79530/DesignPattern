@@ -7,7 +7,7 @@
 ** 目前正在慢慢重構中，有些舊的內容還沒開始重構的會先暫時留著 **
 
 
-## 設計準則
+## 設計守則
 1. 找出程式中可能需要變動之處並將它們獨立出來。  
 Identify the aspects of your application that vary and separate them from what stays the same.
 1. 針對介面寫程式而非針對實作而寫。  
@@ -18,6 +18,8 @@ Favor composition over inheritance.
 Strive for loosely coupled designs between objects that interact.
 1. 類別要對擴充開放，對修改內容關閉  
 Classes should be open for extension, but closed for modification.
+1. 程式要依賴抽象，而非依賴實作類別。  
+Depend upon abstractions. Do not depend upon concrete classes
 
 
 ## 模式分類
@@ -40,6 +42,10 @@ Classes should be open for extension, but closed for modification.
    - 物件模式描述了物件之間的關係且主要是藉由合成定義。 物件之間的關係通常是在執行期建立且更動態與更彈性。  
    Object patterns describe relationships between objects and are primarily defined by composition. Relationships in object patterns are typically created at runtime and are more dynamic and flexible.
 
+
+### 個人歸納
+1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)
+2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)
 
 ## Reference
 1. [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).
