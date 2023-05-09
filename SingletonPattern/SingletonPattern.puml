@@ -1,0 +1,9 @@
+@startuml SingletonPattern
+hide empty members
+
+class Singleton{
+    static Singleton uniqueInstance
+    static getInstance()
+}
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml example
+hide empty members
+
+class CarManager{
+    {static} CarManager carManager
+    int carNumber
+    int waitForDestroyed
+    queue<Car> availableCar
+    set<Car> dispatchedCar
+    
+    {static} getInstance()
+    getCarNumber()
+    setCarNumber()
+    getAvailableNumber()
+    rentCar()
+    returnCar()
+}
+
+class Car{
+    int carNo
+    drive()
+}
+
+@enduml
+
