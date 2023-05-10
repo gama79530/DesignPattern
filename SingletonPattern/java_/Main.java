@@ -5,7 +5,8 @@ import SingletonPattern.java_.CarManagement.*;
 public class Main {    
     public static void main(String[] args) throws InterruptedException {
         final class Client extends Thread{
-            int clientNo;
+            int clientNo = 0;
+
             Client(int clientNo){
                 this.clientNo = clientNo;
             }
@@ -61,6 +62,5 @@ public class Main {
         for(int i=0; i<2; i++){
             clients[i].join();
         }
-        System.out.println();
     }
 }

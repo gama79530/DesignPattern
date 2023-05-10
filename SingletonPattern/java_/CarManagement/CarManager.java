@@ -21,8 +21,8 @@ public class CarManager{
     
     private int carNumber = 0;
     private int waitForDestroyed = 0;
-    Queue<Car> availableCar = new LinkedList<>();
-    Set<Car> dispatchedCar = new HashSet<>();
+    private Queue<Car> availableCar = new LinkedList<>();
+    private Set<Car> dispatchedCar = new HashSet<>();
 
     synchronized public int getCarNumber() {
         return carNumber;
@@ -32,8 +32,7 @@ public class CarManager{
         if(carNumber >= 0){
             synchronized(this){
                 if(carNumber > this.carNumber){
-                    int i = carNumber - this.carNumber;
-                    while(i-- > 0){
+                    for(int i=carNumber - this.carNumber; i > 0; i--){
                         availableCar.add(new Car(carSequence++));
                     }
                     this.carNumber = carNumber;
