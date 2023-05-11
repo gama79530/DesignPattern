@@ -21,9 +21,16 @@ The Singleton Pattern ensures a class has only one instance, and provides a glob
 ## C++相關
 1. 編譯&執行指令  
 cd SingletonPattern/cpp/  
-g++ main.cpp src/audience.cpp src/streamer.cpp -o main  
+g++ main.cpp src/car_management.cpp -o main  
 ./main
+1. C++的synchronized要利用lock自己做。
 
+## Java相關
+1. 要利用volatile與雙重檢查來實作getInstance
+
+## Python相關
+1. [Creating a singleton in Python](https://stackoverflow.com/questions/6760685/creating-a-singleton-in-python)這個討論串提供了好幾種實作方式
+1. python的synchronized要利用lock自己做
 
 ## 其它
- 
+1. 目前是整個物件的method共用一把鎖。若存取的物件成員會不同的話可以利用持有多把鎖來提升效能。

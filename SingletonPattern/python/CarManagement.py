@@ -19,9 +19,7 @@ class CarManagerMeta(type):
                 if cls._instance is None:
                     cls._instance = super().__call__(*args, *kwargs)
                     cls._instance.carNumber = 1
-        elif hasattr(CarManagerMeta, '_lock') and not cls._lock.locked():
-            del CarManagerMeta._lock
-
+        
         return cls._instance
     
     @staticmethod
@@ -56,13 +54,14 @@ class CarManager(metaclass=CarManagerMeta):
                 for _ in range(val - self._carNumber):
                     self._availableCar.append(Car(CarManager._carSequence))
                     CarManager._carSequence += 1
-                self._carNumber = val
+
             elif val < self._carNumber:
                 waitForDestroyed = self._carNumber - val
-                while len(self._availableCar) > 0 and waitForDestroyed > 0:
+                while self._availableCar and waitForDestroyed:
                     self._availableCar.pop(0)
                     waitForDestroyed -= 1
-                self._carNumber = val
+
+            self._carNumber = val
 
     @CarManagerMeta.synchronized
     def getAvailableNumber(self) ->int:
@@ -70,19 +69,19 @@ class CarManager(metaclass=CarManagerMeta):
 
     @CarManagerMeta.synchronized
     def rentCar(self) -> Car:
-        car = self._availableCar.pop(0) if len(self._availableCar) > 0 else None
-        if car is None:
+        car = self._availableCar.pop(0) if self._availableCar else None
+        if car is not None:
             self._dispatchedCar.add(car)
 
         return car
     
     @CarManagerMeta.synchronized
     def returnCar(self, car:Car) -> None:
-        if car is not None:
-            if self._waitForDestroyed > 0:
+        if car in self._dispatchedCar:
+            self._dispatchedCar.remove(car)
+            if self._waitForDestroyed:
                 self._waitForDestroyed-= 1
+                del car
             else:
                 self._availableCar.append(car)
-
-            self._dispatchedCar.discard(car)
 

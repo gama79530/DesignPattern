@@ -35,12 +35,11 @@ public class CarManager{
                     for(int i=carNumber - this.carNumber; i > 0; i--){
                         availableCar.add(new Car(carSequence++));
                     }
-                    this.carNumber = carNumber;
                 }else if(carNumber < this.carNumber){
                     waitForDestroyed = this.carNumber - carNumber;
                     while(availableCar.poll() != null && --waitForDestroyed > 0);
-                    this.carNumber = carNumber;
                 }
+                this.carNumber = carNumber;
             }
         }
     }
@@ -60,15 +59,17 @@ public class CarManager{
     public Car returnCar(Car car){
         if(car != null){
             synchronized(this){
-                if(waitForDestroyed > 0){
-                    waitForDestroyed--;
-                }else{
-                    availableCar.add(car);
+                if(dispatchedCar.remove(car)){
+                    if(waitForDestroyed > 0){
+                        waitForDestroyed--;
+                    }else{
+                        availableCar.add(car);
+                    }
+                    car = null;
                 }
             }
-            dispatchedCar.remove(car);
         }
 
-        return null;
+        return car;
     }
 }
