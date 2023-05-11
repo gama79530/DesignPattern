@@ -8,33 +8,32 @@
 
 using namespace std;
 
+
 class Car{
 public:
-    Car(int carNo){this->carNo = carNo;}
-    int getCarNo(){return carNo;}
-    void setCarNo(){this->carNo = carNo;}
-    void drive(int clientNo);
+    Car(int carNo);
+    ~Car() = default;
 
+    void drive(int clientNo);
+    int getCarNo();
+    
 private:
     int carNo = 0;
 };
 
 class CarManager{
 public:
-    static CarManager* getInstance();
-
+    static CarManager *getInstance();
+    
     int getCarNumber();
     void setCarNumber(int carNumber);
     int getAvailableNumber();
-    Car* rentCar();
-    Car* returnCar(Car* car);
+    Car *rentCar();
+    Car *returnCar(Car *car);
 
 private:
-    static int carSequence;
-    static CarManager* carManager;
-    static mutex static_lock;
-    
-    CarManager(){};
+    CarManager();
+    ~CarManager() = default;
 
     int carNumber = 0;
     int waitForDestroyed = 0;

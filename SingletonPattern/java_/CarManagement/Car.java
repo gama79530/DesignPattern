@@ -11,10 +11,6 @@ public class Car{
         return this.carNo;
     }
 
-    public void setCarNo(int carNo) {
-        this.carNo = carNo;
-    }
-
     public void drive(int clientNo){
         System.out.println(String.format("\tClient %d is driving Car %d.", clientNo, carNo));    
     }

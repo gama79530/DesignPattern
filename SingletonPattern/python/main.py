@@ -7,11 +7,11 @@ def make_task(clientNo):
     def task():
         manager = CarManager()
         car = manager.rentCar()
-        print(f"\tClient {clientNo} rent a car: {'No available car' if car is None else car.carNo}")
+        print(f"\tClient {clientNo} rent a car: {'No available car' if car is None else car._carNo}")
         if car is not None:
             time.sleep(0.02)
             car.drive(clientNo)
-            manager.returnCar(car)
+            car = manager.returnCar(car)
 
     return task
 

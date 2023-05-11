@@ -5,6 +5,12 @@ import java.util.*;
 public class CarManager{
     private static int carSequence = 0;
     private volatile static CarManager carManager = null;
+    
+    private int carNumber = 0;
+    private int waitForDestroyed = 0;
+    private Queue<Car> availableCar = new LinkedList<>();
+    private Set<Car> dispatchedCar = new HashSet<>();
+
     public static CarManager getInstance(){
         if(carManager == null){
             synchronized (CarManager.class){
@@ -18,11 +24,6 @@ public class CarManager{
     }
 
     private CarManager(){}
-    
-    private int carNumber = 0;
-    private int waitForDestroyed = 0;
-    private Queue<Car> availableCar = new LinkedList<>();
-    private Set<Car> dispatchedCar = new HashSet<>();
 
     synchronized public int getCarNumber() {
         return carNumber;

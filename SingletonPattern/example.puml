@@ -2,23 +2,28 @@
 hide empty members
 
 class CarManager{
-    {static} CarManager carManager
-    int carNumber
-    int waitForDestroyed
-    queue<Car> availableCar
-    set<Car> dispatchedCar
+    - {static} CarManager carManager
+    - {static} int carSequence
+    - int carNumber
+    - int waitForDestroyed
+    - Queue<Car> availableCar
+    - Set<Car> dispatchedCar
     
-    {static} getInstance()
-    getCarNumber()
-    setCarNumber()
-    getAvailableNumber()
-    rentCar()
-    returnCar()
+    + {static} CarManager getInstance()
+    - CarManager()
+    + int getCarNumber()
+    + void setCarNumber(int carNumber)
+    + int getAvailableNumber()
+    + Car rentCar()
+    + Car returnCar(Car car)
 }
 
 class Car{
-    int carNo
-    drive()
+    - int carNo
+
+    + Car(int carNo)
+    + void drive(int clientNo)
+    + int getCarNo()
 }
 
 @enduml

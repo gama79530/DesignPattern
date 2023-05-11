@@ -3,21 +3,32 @@
 
 using namespace std;
 
+Car::Car(int carNo){
+    this->carNo = carNo;
+}
 
 void Car::drive(int clientNo){
     cout << "\tClient " << clientNo << " is driving Car " << carNo << "." << endl;
 }
 
-CarManager* CarManager::getInstance(){
-    if(carManager == nullptr){
-        lock_guard<mutex> lock(static_lock);
-        if(carManager == nullptr){
-            carManager = new CarManager();
-            carManager->setCarNumber(1);
+int Car::getCarNo(){
+    return carNo;
+}
+
+namespace{
+    mutex car_manager_lock;
+    CarManager *car_manager = nullptr;
+}
+CarManager *CarManager::getInstance(){
+    if(car_manager == nullptr){
+        lock_guard<mutex> lock(car_manager_lock);
+        if(car_manager == nullptr){
+            car_manager = new CarManager();
+            car_manager->setCarNumber(1);
         }
     }
     
-    return carManager;
+    return car_manager;
 }
 
 int CarManager::getCarNumber(){
@@ -25,12 +36,15 @@ int CarManager::getCarNumber(){
     return carNumber;
 }
 
+namespace{
+    int car_manager_sequence = 0;
+}
 void CarManager::setCarNumber(int carNumber){
     if(carNumber >= 0){
         lock_guard<mutex> lock(this->instance_lock);
         if(carNumber > this->carNumber){
             for(int i = carNumber - this->carNumber; i > 0; i--){
-                availableCar.push(new Car(carSequence++));
+                availableCar.push(new Car(car_manager_sequence++));
             }
         }else if(carNumber < this->carNumber){
             waitForDestroyed = this->carNumber - carNumber;
@@ -49,7 +63,7 @@ int CarManager::getAvailableNumber(){
     return availableCar.size();
 }
 
-Car* CarManager::rentCar(){
+Car *CarManager::rentCar(){
     lock_guard<mutex> lock(instance_lock);
     Car *car = nullptr;
     if(!availableCar.empty()){
@@ -61,7 +75,7 @@ Car* CarManager::rentCar(){
     return car;
 }
 
-Car* CarManager::returnCar(Car* car){
+Car *CarManager::returnCar(Car *car){
     if(car != nullptr){
         lock_guard<mutex> lock(instance_lock);
         if(dispatchedCar.erase(car)){
@@ -78,7 +92,4 @@ Car* CarManager::returnCar(Car* car){
     return car;
 }
 
-
-int CarManager::carSequence = 0;
-CarManager* CarManager::carManager = nullptr;
-mutex CarManager::static_lock = mutex();
+CarManager::CarManager() = default;
