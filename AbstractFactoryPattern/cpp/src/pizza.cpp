@@ -1,37 +1,40 @@
 #include "header/pizza.h"
 
-using namespace std;
+Pizza::Pizza(shared_ptr<vector<shared_ptr<Ingredient>>> ingredients){
+    this->ingredients = ingredients;
+}
 
-CheesePizza::~CheesePizza(){
-    delete cheese;
+CheesePizza::CheesePizza(shared_ptr<Cheese> cheese, shared_ptr<vector<shared_ptr<Ingredient>>> ingredients):Pizza(ingredients){
+    this->cheese = cheese;
+}
+
+shared_ptr<Cheese> CheesePizza::getCheese(){
+    return cheese;
+}
+
+void CheesePizza::setCheese(shared_ptr<Cheese> cheese){
+    this->cheese = cheese;
 }
 
 string CheesePizza::showIngredients(){
     string ingredientsString = cheese->getInfo();
-    for(auto ingredient: ingredients){
+    for(auto ingredient: *ingredients){
         ingredientsString += (", " + ingredient->getInfo());
     }
 
     return ingredientsString;
 }
 
-CheesePizzaOfStoreA::CheesePizzaOfStoreA(IngredientFactory& ingredientFactory){
-    ingredients.push_back(ingredientFactory.createDough());
-    cheese = ingredientFactory.createCheese();
+CheesePizzaOfStoreA::CheesePizzaOfStoreA(shared_ptr<Cheese> cheese, shared_ptr<vector<shared_ptr<Ingredient>>> ingredients):CheesePizza(cheese, ingredients){
 }
 
-CheesePizzaOfStoreA::CheesePizzaOfStoreA(IngredientFactory&& ingredientFactory){
-    ingredients.push_back(ingredientFactory.createDough());
-    cheese = ingredientFactory.createCheese();
+string CheesePizzaOfStoreA::getName(){
+    return "store A cheese pizze";
 }
 
-CheesePizzaOfStoreB::CheesePizzaOfStoreB(IngredientFactory& ingredientFactory){
-    ingredients.push_back(ingredientFactory.createDough());
-    ingredients.push_back(ingredientFactory.createPepperoni());
-    cheese = ingredientFactory.createCheese();
+CheesePizzaOfStoreB::CheesePizzaOfStoreB(shared_ptr<Cheese> cheese, shared_ptr<vector<shared_ptr<Ingredient>>> ingredients):CheesePizza(cheese, ingredients){
 }
 
-CheesePizzaOfStoreB::CheesePizzaOfStoreB(IngredientFactory&& ingredientFactory){
-    ingredients.push_back(ingredientFactory.createDough());
-    cheese = ingredientFactory.createCheese();
+string CheesePizzaOfStoreB::getName(){
+    return "store B cheese pizze";
 }

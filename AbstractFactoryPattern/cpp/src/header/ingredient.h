@@ -14,12 +14,12 @@ class Dough: public Ingredient{
 
 class ThickCrustDough: public Dough{
 public:
-    string getInfo(){return "thick crust dough";}
+    string getInfo() override;
 };
 
 class ThinCrustDough: public Dough{
 public:
-    string getInfo(){return "thin crust dough";}
+    string getInfo() override;
 };
 
 class Cheese: public Ingredient{
@@ -27,12 +27,12 @@ class Cheese: public Ingredient{
 
 class ReggianoCheese: public Cheese{
 public:
-    string getInfo(){return "reggiano cheese";}
+    string getInfo() override;
 };
 
 class MozzarellaCheese: public Cheese{
 public:
-    string getInfo(){return "mozzarella cheese";}
+    string getInfo() override;
 };
 
 class Pepperoni: public Ingredient{
@@ -40,7 +40,7 @@ class Pepperoni: public Ingredient{
 
 class SlicedPepperoni: public Pepperoni{
 public:
-    string getInfo(){return "sliced pepperoni";}
+    string getInfo() override;
 };
 
 #endif

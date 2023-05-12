@@ -5,18 +5,18 @@ class Client{
 }
 
 interface AbstractFactory{
-    createProductA()
-    createProductB()
+    + createProductA()
+    + createProductB()
 }
 
 class ConcreteFactoryA{
-    createProductA()
-    createProductB()
+    + createProductA()
+    + createProductB()
 }
 
 class ConcreteFactoryB{
-    createProductA()
-    createProductB()
+    + createProductA()
+    + createProductB()
 }
 
 interface ProductA{

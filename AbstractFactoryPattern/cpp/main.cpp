@@ -5,19 +5,18 @@
 using namespace std;
 
 int main(){
-    PizzaStore &&pizzaStoreA = PizzaStoreA();
-    PizzaStore &&pizzaStoreB = PizzaStoreB();
-    Pizza *pizza = nullptr;
+    shared_ptr<PizzaStore> pizzaStoreA = make_shared<PizzaStoreA>();
+    shared_ptr<PizzaStore> pizzaStoreB = make_shared<PizzaStoreB>();
+    shared_ptr<Pizza> pizza;
 
-    pizza = pizzaStoreA.orderPizza(CHEESE_PIZZA);
+    pizza = pizzaStoreA->orderPizza(CHEESE_PIZZA);
     cout << "Order " << pizza->getName() << endl;
     cout << "The ingredient of pizza are: " << pizza->showIngredients() << endl;
     cout << endl;
-    delete pizza;
-    pizza = pizzaStoreB.orderPizza(CHEESE_PIZZA);
+    pizza = pizzaStoreB->orderPizza(CHEESE_PIZZA);
     cout << "Order " << pizza->getName() << endl;
     cout << "The ingredient of pizza are: " << pizza->showIngredients() << endl;
-    delete pizza;
+    pizza = shared_ptr<Pizza>();
     
     return 0;
 }

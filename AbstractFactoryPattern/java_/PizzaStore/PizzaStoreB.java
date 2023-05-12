@@ -1,5 +1,7 @@
 package AbstractFactoryPattern.java_.PizzaStore;
 
+import java.util.*;
+import AbstractFactoryPattern.java_.PizzaStore.Ingredient.*;
 import AbstractFactoryPattern.java_.PizzaStore.IngredientFactory.*;
 import AbstractFactoryPattern.java_.PizzaStore.Pizza.*;
 
@@ -19,7 +21,11 @@ public class PizzaStoreB implements PizzaStore{
     @Override
     public Pizza orderPizza(PizzaType pizzaType) {
         if(pizzaType == PizzaType.CHEESE_PIZZA){
-            return new CheesePizzeOfStoreB(ingredientFactory);
+            Cheese cheese = ingredientFactory.createCheese();
+            List<Ingredient> ingredients = new ArrayList<>();
+            ingredients.add(ingredientFactory.createDough());
+            ingredients.add(ingredientFactory.createPepperoni());
+            return new CheesePizzeOfStoreB(cheese, ingredients);
         }
 
         return null;

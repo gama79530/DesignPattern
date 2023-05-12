@@ -3,8 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 #include "ingredient.h"
-#include "ingredient_factory.h"
 
 using namespace std;
 
@@ -17,33 +17,36 @@ public:
     virtual string getName() = 0;
     virtual string showIngredients() = 0;
 
+    Pizza(shared_ptr<vector<shared_ptr<Ingredient>>> ingredients);
+
 protected:
-    vector<Ingredient*> ingredients;
+    shared_ptr<vector<shared_ptr<Ingredient>>> ingredients;
 };
 
 class CheesePizza:public Pizza{
 public:
-    ~CheesePizza();
-    Cheese* getCheese(){return cheese;}
-    void setCheese(Cheese* cheese){this->cheese = cheese;}
-    string showIngredients();
+    CheesePizza(shared_ptr<Cheese> cheese, shared_ptr<vector<shared_ptr<Ingredient>>> ingredients);
+
+    shared_ptr<Cheese> getCheese();
+    void setCheese(shared_ptr<Cheese> cheese);
+    string showIngredients() override;
     
 protected:
-    Cheese *cheese;
+    shared_ptr<Cheese> cheese;
 };
 
 class CheesePizzaOfStoreA: public CheesePizza{
 public:
-    CheesePizzaOfStoreA(IngredientFactory& ingredientFactory);
-    CheesePizzaOfStoreA(IngredientFactory&& ingredientFactory);
-    string getName(){return "store A cheese pizze";}
+    CheesePizzaOfStoreA(shared_ptr<Cheese> cheese, shared_ptr<vector<shared_ptr<Ingredient>>> ingredients);
+
+    string getName() override;
 };
 
 class CheesePizzaOfStoreB: public CheesePizza{
 public:
-    CheesePizzaOfStoreB(IngredientFactory& ingredientFactory);
-    CheesePizzaOfStoreB(IngredientFactory&& ingredientFactory);
-    string getName(){return "store B cheese pizze";}
+    CheesePizzaOfStoreB(shared_ptr<Cheese> cheese, shared_ptr<vector<shared_ptr<Ingredient>>> ingredients);
+
+    string getName() override;
 };
 
 #endif

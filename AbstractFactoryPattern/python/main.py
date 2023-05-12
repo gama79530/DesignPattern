@@ -12,3 +12,5 @@ if __name__ == '__main__':
     pizza = pizzaStoreB.orderPizza(PizzaType.CHEESE_PIZZA)
     print(f"Order {pizza.getName()}")
     print(f"The ingredient of pizza are: {pizza.showIngredients()}")
+
+

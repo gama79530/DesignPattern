@@ -1,17 +1,15 @@
 package AbstractFactoryPattern.java_.PizzaStore.Pizza;
 
 import java.util.*;
-import AbstractFactoryPattern.java_.PizzaStore.Ingredient.Cheese;
-import AbstractFactoryPattern.java_.PizzaStore.Ingredient.Ingredient;
-import AbstractFactoryPattern.java_.PizzaStore.IngredientFactory.IngredientFactory;
+import AbstractFactoryPattern.java_.PizzaStore.Ingredient.*;
 
 public class CheesePizzaOfStoreA implements CheesePizza{
-    private List<Ingredient> ingredients = new ArrayList<>();
+    private List<Ingredient> ingredients = null;
     private Cheese cheese = null;
 
-    public CheesePizzaOfStoreA(IngredientFactory ingredientFactory) {
-        ingredients.add(ingredientFactory.createDough());
-        cheese = ingredientFactory.createCheese();
+    public CheesePizzaOfStoreA(Cheese cheese, List<Ingredient> ingredients) {
+        this.cheese = cheese;
+        this.ingredients = ingredients;
     }
 
     @Override

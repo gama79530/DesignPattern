@@ -23,7 +23,7 @@ The Abstract Factory Pattern provides an interface for creating families of rela
 ## C++相關
 1. 編譯&執行指令  
 cd AbstractFactoryPattern/cpp/  
-g++ main.cpp src/ingredient.cpp src/ingredient_factory.cpp  src/pizza.cpp src/pizza_store.cpp -o main  
+g++ main.cpp src/ingredient_factory.cpp src/ingredient.cpp src/pizza_store.cpp src/pizza.cpp -o main  
 ./main
 
 

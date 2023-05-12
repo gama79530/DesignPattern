@@ -2,101 +2,113 @@
 hide empty members
 
 interface Ingredient{
-    getInfo()
+    + String getInfo()
 }
 
 interface Dough{
-    getInfo()
+    + String getInfo()
 }
 
 class ThickCrustDough{
-    getInfo()
+    + String getInfo()
 }
 
 class ThinCrustDough{
-    getInfo()
+    + String getInfo()
 }
 
 interface Cheese{
-    getInfo()
+    + String getInfo()
 }
 
 class ReggianoCheese{
-    getInfo()
+    + String getInfo()
 }
 
 class MozzarellaCheese{
-    getInfo()
+    + String getInfo()
 }
 
 
 interface Pepperoni{
-    getInfo()
+    + String getInfo()
 }
 
 class SlicedPepperoni{
-    getInfo()
+    + String getInfo()
+}
+
+enum PizzaType{
+    + CHEESE_PIZZA
 }
 
 interface Pizza{
-    List<Ingredient> ingredients
-    getName()
-    showIngredients()
+    + List<Ingredient> ingredients
+
+    + String getName()
+    + String showIngredients()
 }
 
 interface CheesePizza{
-    List<Ingredient> ingredients
-    Cheese cheese 
-    getName()
-    showIngredients()
+    + List<Ingredient> ingredients
+    + Cheese cheese 
+    
+    + String getName()
+    + String showIngredients()
 }
 
 class CheesePizzaOfStoreA{
-    List<Ingredient> ingredients
-    Cheese cheese 
-    getName()
-    showIngredients()
+    + List<Ingredient> ingredients
+    + Cheese cheese 
+    
+    + CheesePizzaOfStoreA(Cheese cheese, List<Ingredient> ingredients)
+    
+    + String getName()
+    + String showIngredients()
 }
 
 
 class CheesePizzaOfStoreB{
-    List<Ingredient> ingredients
-    Cheese cheese 
-    getName()
-    showIngredients()
+    + List<Ingredient> ingredients
+    + Cheese cheese 
+    
+    + CheesePizzaOfStoreB(Cheese cheese, List<Ingredient> ingredients)
+
+    + String getName()
+    + String showIngredients()
 }
 
 interface IngredientFactory{
-    createDough()
-    createCheese()
-    createPepperoni()
+    + Dough createDough()
+    + Cheese createCheese()
+    + Pepperoni createPepperoni()
 }
 
 class IngredientFactoryOfStoreA{
-    createDough()
-    createCheese()
-    createPepperoni()
+    + Dough createDough()
+    + Cheese createCheese()
+    + Pepperoni createPepperoni()
 }
 
 class IngredientFactoryOfStoreB{
-    createDough()
-    createCheese()
-    createPepperoni()
+    + Dough createDough()
+    + Cheese createCheese()
+    + Pepperoni createPepperoni()
 }
 
 abstract class PizzaStore{
-    IngredientFactory ingredientFactory
-    orderPizza()
+    + IngredientFactory ingredientFactory
+    + Pizza orderPizza()
 }
 
 class PizzaStoreA{
-    IngredientFactory ingredientFactory
-    orderPizza()
+    + IngredientFactory ingredientFactory
+    + Pizza orderPizza()
 }
 
 class PizzaStoreB{
-    IngredientFactory ingredientFactory
-    orderPizza()
+    + IngredientFactory ingredientFactory
+    + Pizza orderPizza()
 }
 
 Ingredient <|-- Dough

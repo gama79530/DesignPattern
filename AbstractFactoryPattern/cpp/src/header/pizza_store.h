@@ -6,23 +6,23 @@
 
 class PizzaStore{
 public:
-    virtual Pizza* orderPizza(PizzaType pizzaType) = 0;
-    ~PizzaStore();
+    virtual shared_ptr<Pizza> orderPizza(PizzaType pizzaType) = 0;
+
 protected:
-    IngredientFactory *ingredientFactory = nullptr;
+    unique_ptr<IngredientFactory> ingredientFactory;
 };
 
 class PizzaStoreA: public PizzaStore{
 public:
-    PizzaStoreA(){ingredientFactory = new IngredientFactoryOfStoreA();}
-    Pizza* orderPizza(PizzaType pizzaType);
+    PizzaStoreA();
+    shared_ptr<Pizza> orderPizza(PizzaType pizzaType);
 };
 
 
 class PizzaStoreB: public PizzaStore{
 public:
-    PizzaStoreB(){ingredientFactory = new IngredientFactoryOfStoreB();}
-    Pizza* orderPizza(PizzaType pizzaType);
+    PizzaStoreB();
+    shared_ptr<Pizza> orderPizza(PizzaType pizzaType);
 };
 
 #endif
