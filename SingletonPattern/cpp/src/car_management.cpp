@@ -31,6 +31,10 @@ CarManager *CarManager::getInstance(){
     return car_manager;
 }
 
+CarManager::~CarManager(){
+    car_manager = nullptr;
+}
+
 int CarManager::getCarNumber(){
     lock_guard<mutex> lock(this->instance_lock);
     return carNumber;

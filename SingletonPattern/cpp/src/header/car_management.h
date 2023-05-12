@@ -24,6 +24,8 @@ private:
 class CarManager{
 public:
     static CarManager *getInstance();
+
+    ~CarManager();
     
     int getCarNumber();
     void setCarNumber(int carNumber);
@@ -33,7 +35,6 @@ public:
 
 private:
     CarManager();
-    ~CarManager() = default;
 
     int carNumber = 0;
     int waitForDestroyed = 0;
