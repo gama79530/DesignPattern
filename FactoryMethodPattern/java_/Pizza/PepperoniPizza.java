@@ -16,9 +16,4 @@ public class PepperoniPizza implements Pizza{
     public int getRadius() {
         return radius;
     }
-
-    @Override
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
 }

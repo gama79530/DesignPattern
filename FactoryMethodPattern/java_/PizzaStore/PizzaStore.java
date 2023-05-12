@@ -3,7 +3,7 @@ package FactoryMethodPattern.java_.PizzaStore;
 import FactoryMethodPattern.java_.Pizza.*;
 
 public abstract class PizzaStore {
-    abstract Pizza createPizza(PizzaType type, int radius);
+    abstract protected Pizza createPizza(PizzaType type, int radius);
     
     public Pizza orderPizza(PizzaType type, int radius){
         Pizza pizza = createPizza(type, radius);

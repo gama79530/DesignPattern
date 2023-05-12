@@ -2,38 +2,49 @@
 hide empty members
 
 abstract class PizzaStore{
-    {abstract}createPizza()
-    orderPizza()
+    # {abstract} Pizza createPizza(PizzaType type, int radius)
+    + Pizza orderPizza(PizzaType type, int radius)
 }
 
 class PizzaStoreA{
-    createPizza()
-    orderPizza()
+    # Pizza createPizza(PizzaType type, int radius)
+    + Pizza orderPizza(PizzaType type, int radius)
 }
 
 class PizzaStoreB{
-    createPizza()
-    orderPizza()
+    # Pizza createPizza(PizzaType type, int radius)
+    + Pizza orderPizza(PizzaType type, int radius)
+}
+
+enum PizzaType{
+    + CHEESE_PIZZA
+    + PEPPERONI_PIZZA
+    + VEGGIE_PIZZA
+
+    + String getInfo()
 }
 
 interface Pizza{
-    int radius
-    getPrice()
+    + int getPrice()
+    + int getRadius()
 }
 
 class CheesePizza{
-    int radius
-    getPrice()
+    + CheesePizza(int radius)
+    + int getPrice()
+    + int getRadius()
 }
 
 class PepperoniPizza{
-    int radius
-    getPrice()
+    + PepperoniPizza(int radius)
+    + int getPrice()
+    + int getRadius()
 }
 
 class VeggiePizza{
-    int radius
-    getPrice()
+    + VeggiePizza(int radius)
+    + int getPrice()
+    + int getRadius()
 }
 
 PizzaStore <|-- PizzaStoreA

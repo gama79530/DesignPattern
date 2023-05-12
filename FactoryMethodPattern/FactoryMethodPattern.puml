@@ -2,15 +2,15 @@
 hide empty members
 
 abstract class Creator{
-    {abstract}factoryMethod()
+    + {abstract} factoryMethod()
 }
 
 class ConcreteCreator1{
-    factoryMethod()
+    + factoryMethod()
 }
 
 class ConcreteCreator2{
-    factoryMethod()
+    + factoryMethod()
 }
 
 interface Product{

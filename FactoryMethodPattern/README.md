@@ -21,7 +21,7 @@ The Factory Method Pattern defines an interface for creating an object, but lets
 ## C++相關
 1. 編譯&執行指令  
 cd FactoryMethodPattern/cpp/  
-g++ main.cpp src/pizza.cpp src/pizza_store.cpp -o main  
+g++ main.cpp src/pizza_store.cpp -o main  
 ./main
 
 
