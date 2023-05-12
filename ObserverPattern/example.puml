@@ -3,32 +3,31 @@ hide empty members
 
 
 interface Streamer{
-    String accountInfo
-    registerObserver()
-    removeObserver()
-    notifyObserver()
-    getIsStreaming()
-    setIsStreaming()
+    + String accountInfo
+    + void registerObserver()
+    + boolean removeObserver()
+    + void notifyObserver()
+    + boolean getIsStreaming()
+    + void setIsStreaming(boolean isStreaming)
 }
 
 interface Audience{
-    update()
+    + void update(String streamInfo)
 }
 
 class TwitchStreamer{
-    String accountInfo
-    registerObserver()
-    removeObserver()
-    notifyObserver()
-    getIsStreaming()
-    setIsStreaming()
+    + String accountInfo
+    + void registerObserver()
+    + boolean removeObserver()
+    + void notifyObserver()
+    + boolean getIsStreaming()
+    + void setIsStreaming(boolean isStreaming)
 }
 
 class TwitchAudience{
-    accountID
-    nickname
-    update()
-    equals()
+    + int accountID
+    + String nickname
+    + void update(String streamInfo)
 }
 
 Streamer <|-- TwitchStreamer

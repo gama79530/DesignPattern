@@ -4,6 +4,10 @@
 
 using namespace std;
 
+bool Streamer::getIsStreaming(){
+    return isStreaming;
+}
+
 void Streamer::setIsStreaming(bool isStreaming){
     if(this->isStreaming != isStreaming){
         this->isStreaming = isStreaming;
@@ -15,11 +19,11 @@ TwitchStreamer::TwitchStreamer(string accountInfo){
     this->accountInfo = accountInfo;
 }
 
-void TwitchStreamer::registerObserver(Audience* audience){
+void TwitchStreamer::registerObserver(shared_ptr<Audience> audience){
     this->audience.insert(audience);
 }
     
-void TwitchStreamer::removeObserver(Audience* audience){
+void TwitchStreamer::removeObserver(shared_ptr<Audience> audience){
     this->audience.erase(audience);
 }
     

@@ -14,8 +14,10 @@ class TwitchAudience: public Audience{
 public:
     int accountID;
     string nickname;
+    
     TwitchAudience(int accountID, string nickname);
-    void update(string streamInfo);
+    
+    void update(string streamInfo) override;
 };
 
 #endif

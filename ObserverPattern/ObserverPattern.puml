@@ -2,31 +2,31 @@
 hide empty members
 
 interface Subject{
-    registerObserver()
-    removeObserver()
-    notifyObserver()
+    + registerObserver()
+    + removeObserver()
+    + notifyObserver()
 }
 
 interface Observer{
-    update()
+    + update()
 }
 
 class ConcreteSubject{
-    registerObserver()
-    removeObserver()
-    notifyObserver()
+    + registerObserver()
+    + removeObserver()
+    + notifyObserver()
 }
 
 class ConcreteObserver1{
-    update()
+    + update()
 }
 
 class ConcreteObserver2{
-    update()
+    + update()
 }
 
 class ConcreteObserver3{
-    update()
+    + update()
 }
 
 Subject <|-- ConcreteSubject

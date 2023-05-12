@@ -14,13 +14,8 @@ public class TwitchAudience implements Audience{
         System.out.println(String.format("\tAudience %s receive the message: %s", nickname, streamInfo));
     }
 
-    @Override
-    public boolean equals(Object obj){
-        return this.accountID == ((TwitchAudience)obj).getAccountID();
-    }
-
     public int getAccountID() {
-        return this.accountID;
+        return accountID;
     }
 
     public void setAccountID(int accountID) {
@@ -28,7 +23,7 @@ public class TwitchAudience implements Audience{
     }
 
     public String getNickname() {
-        return this.nickname;
+        return nickname;
     }
 
     public void setNickname(String nickname) {
