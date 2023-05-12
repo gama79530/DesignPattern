@@ -23,7 +23,7 @@ The Decorator Pattern attaches additional responsibilities to an object dynamica
 ## C++相關
 1. 編譯&執行指令  
 cd DecoratorPattern/cpp/  
-g++ main.cpp src/beverage.cpp src/coffee.cpp src/condiment.cpp -o main  
+g++ main.cpp src/beverage.cpp -o main  
 ./main
 
 ## Python相關

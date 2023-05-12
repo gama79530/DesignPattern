@@ -2,34 +2,36 @@
 hide empty members
 
 interface Component{
-    methodA()
+    + aMethod()
 } 
 
 interface BaseComponent{
-    methodA()
+    + aMethod()
 }
 
 class ConcreteComponentA{
-    methodA()
+    + aMethod()
 }
 
 class ConcreteComponentB{
-    methodA()
+    + aMethod()
 }
 
 interface Decorator{
-    Component component
-    methodA()
+    - Component component
+    + aMethod()
 }
 
 class  ConcreteDecoratorA{
-    Component component
-    methodA()
+    - Component component
+    + ConcreteDecoratorA(Component component)
+    + aMethod()
 }
 
 class  ConcreteDecoratorB{
-    Component component
-    methodA()
+    - Component component
+    + ConcreteDecoratorB(Component component)
+    + aMethod()
 }
 
 Component <|-- BaseComponent

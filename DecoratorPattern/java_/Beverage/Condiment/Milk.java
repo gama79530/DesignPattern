@@ -3,7 +3,7 @@ package DecoratorPattern.java_.Beverage.Condiment;
 import DecoratorPattern.java_.Beverage.Beverage;
 
 public class Milk implements Condiment{
-    Beverage beverage;
+    private Beverage beverage;
 
     public Milk(Beverage beverage) {
         this.beverage = beverage;
@@ -27,10 +27,5 @@ public class Milk implements Condiment{
     @Override
     public Beverage getBeverage() {
         return beverage;
-    }
-
-    @Override
-    public void setBeverage(Beverage beverage) {
-        this.beverage = beverage;
     }
 }

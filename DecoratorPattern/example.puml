@@ -2,48 +2,51 @@
 hide empty members
 
 interface Beverage{
-    getPrice()
-    getgetCost()
-    getProfit()
+    + int getPrice()
+    + int getgetCost()
+    + int getProfit()
 } 
 
 interface Coffee{
-    getPrice()
-    getCost()
-    getProfit()
+    + int getPrice()
+    + int getCost()
+    + int getProfit()
 }
 
 class HouseBlend{
-    getPrice()
-    getCost()
-    getProfit()
+    + int getPrice()
+    + int getCost()
+    + int getProfit()
 }
 
 class DarkRoast{
-    getPrice()
-    getCost()
-    getProfit()
+    + int getPrice()
+    + int getCost()
+    + int getProfit()
 }
 
 interface Condiment{
-    Beverage beverage
-    getPrice()
-    getCost()
-    getProfit()
+    - Beverage beverage
+    + Beverage getBeverage()
+    + int getPrice()
+    + int getCost()
+    + int getProfit()
 }
 
 class Milk{
-    Beverage beverage
-    getPrice()
-    getCost()
-    getProfit()
+    - Beverage beverage
+    + Milk(Beverage beverage)
+    + int getPrice()
+    + int getCost()
+    + int getProfit()
 }
 
 class Mocha{
-    Beverage beverage
-    getPrice()
-    getCost()
-    getProfit()
+    - Beverage beverage
+    + Mocha(Beverage beverage)
+    + int getPrice()
+    + int getCost()
+    + int getProfit()
 }
 
 Beverage <|-- Coffee

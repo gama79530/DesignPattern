@@ -3,7 +3,7 @@ package DecoratorPattern.java_.Beverage.Condiment;
 import DecoratorPattern.java_.Beverage.Beverage;
 
 public class Mocha implements Condiment{
-    Beverage beverage;
+    private Beverage beverage;
 
     public Mocha(Beverage beverage) {
         this.beverage = beverage;
@@ -29,8 +29,4 @@ public class Mocha implements Condiment{
         return beverage;
     }
 
-    @Override
-    public void setBeverage(Beverage beverage) {
-        this.beverage = beverage;
-    }
 }
