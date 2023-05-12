@@ -2,20 +2,20 @@
 hide empty members
 
 class Contex{
-    Strategy strategy
-    invokeStrategyMethod()
+    + Strategy strategy
+    + invokeStrategyMethod()
 }
 
 interface Strategy{
-    strategyMethod()
+    + strategyMethod()
 }
 
 class ConcreteStrategy1{
-    strategyMethod()
+    + strategyMethod()
 }
 
 class ConcreteStrategy2{
-    strategyMethod()
+    + strategyMethod()
 }
 
 Contex o-- Strategy

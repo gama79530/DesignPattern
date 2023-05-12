@@ -25,16 +25,16 @@ public class Computer {
         return this.gpu1;
     }
 
-    public void setGpu1(GPU gpu1) {
-        this.gpu1 = gpu1;
+    public void setGpu1(GPU gpu) {
+        gpu1 = gpu;
     }
 
     public GPU getGpu2() {
         return this.gpu2;
     }
 
-    public void setGpu2(GPU gpu2) {
-        this.gpu2 = gpu2;
+    public void setGpu2(GPU gpu) {
+        gpu2 = gpu;
     }
 
     public void showInfo(){

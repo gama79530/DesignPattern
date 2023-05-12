@@ -1,15 +1,14 @@
 #include "src/header/computer.h"
-#include "src/header/CPU.h"
-#include "src/header/GPU.h"
 
 using namespace std;
 
 int main(){
     Computer computer;
-    AMD_Ryzen7_3700X cpu;
-    NVIDIA_GeForce_GTX_1660_SUPER gpu2;
-    computer.setCpu(&cpu);
-    computer.setGpu2(&gpu2);
+    shared_ptr<CPU> cpu = make_shared<AMD_Ryzen7_3700X>();
+    shared_ptr<GPU> gpu = make_shared<NVIDIA_GeForce_GTX_1660_SUPER>();
+    
+    computer.setCpu(cpu);
+    computer.setGpu2(gpu);
     computer.showInfo();
 
     return 0;

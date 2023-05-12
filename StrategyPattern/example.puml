@@ -2,26 +2,26 @@
 hide empty members
 
 Class Computer{
-    CPU cpu
-    GPU gpu1
-    GPU gpu2
-    showInfo()
+    + CPU cpu
+    + GPU gpu1
+    + GPU gpu2
+    + void showInfo()
 }
 
 interface CPU{
-    showInfo()
+    + showInfo()
 }
 
 interface GPU{
-    showInfo()
+    + showInfo()
 }
 
 class AMD_Ryzen7_3700X{
-    showInfo()
+    + showInfo()
 }
 
 class NVIDIA_GeForce_GTX_1660_SUPER{
-    showInfo()
+    + showInfo()
 }
 
 Computer o-- CPU

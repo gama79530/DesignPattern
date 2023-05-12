@@ -21,12 +21,13 @@ The Strategy Pattern defines a family of algorithms, encapsulates each one, and 
 我們要組裝一台電腦，我們有一個client物件Computer。該物件負責整合所有零件讓其發揮完整功能。我們實作了一個稱作showInfo的method用來顯示已安裝的配件。另外我們有許多各式各樣的元件，例如CPU、GPU、Memory等等。client有事先決定好數量的插槽可以供我們選用，而每個插槽也有各式各樣對應的配件可以使用。為了簡化範例，我們只做顯示CPU與GPU的部分。
 
 ## C++相關
-1. 因為C++有function pointer可以使用，因此演算法也可以使用function與function pointer來搭配完成合成
-2. Aggregation member用指標(要處理deconstructor)，Composition用Refference會比較好操作。
 1. 範例編譯&執行指令  
 cd StrategyPattern/cpp/  
-g++ main.cpp src/computer.cpp src/GPU.cpp src/CPU.cpp -o main  
+g++ main.cpp src/computer.cpp -o main  
 ./main
+1. 因為C++有function pointer可以使用，因此演算法也可以使用function與function pointer來搭配完成合成
+2. Aggregation member用指標(要處理destructor)，Composition用Refference會比較好操作。
+4. 利用C++的smart pointer會比較容易處理Aggregation member。
 
 ## python相關
 1. 因為python的function也是物件，因此若演算法物件只提供單一功能的話也可以直接用function做合成而非一定要定義一個class
