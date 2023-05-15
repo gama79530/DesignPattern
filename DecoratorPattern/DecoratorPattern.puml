@@ -9,37 +9,14 @@ interface BaseComponent{
     + aMethod()
 }
 
-class ConcreteComponentA{
-    + aMethod()
-}
-
-class ConcreteComponentB{
-    + aMethod()
-}
-
 interface Decorator{
     - Component component
-    + aMethod()
-}
-
-class  ConcreteDecoratorA{
-    - Component component
-    + ConcreteDecoratorA(Component component)
-    + aMethod()
-}
-
-class  ConcreteDecoratorB{
-    - Component component
-    + ConcreteDecoratorB(Component component)
+    + Decorator(Component component)
     + aMethod()
 }
 
 Component <|-- BaseComponent
-BaseComponent <|-- ConcreteComponentA
-BaseComponent <|-- ConcreteComponentB
 
 Component <|-- Decorator
-Decorator <|-- ConcreteDecoratorA
-Decorator <|-- ConcreteDecoratorB
 
 @enduml

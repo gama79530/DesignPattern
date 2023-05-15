@@ -9,43 +9,11 @@ interface AbstractFactory{
     + createProductB()
 }
 
-class ConcreteFactoryA{
-    + createProductA()
-    + createProductB()
-}
-
-class ConcreteFactoryB{
-    + createProductA()
-    + createProductB()
-}
-
 interface ProductA{
-}
-
-class ConcreteProductA1{
-}
-
-class ConcreteProductA2{
 }
 
 interface ProductB{
 }
-
-
-class ConcreteProductB1{
-}
-
-class ConcreteProductB2{
-}
-
-AbstractFactory <|-- ConcreteFactoryA
-AbstractFactory <|-- ConcreteFactoryB
-
-ProductA <|-- ConcreteProductA1
-ProductA <|-- ConcreteProductA2
-
-ProductB <|-- ConcreteProductB1
-ProductB <|-- ConcreteProductB2
 
 AbstractFactory -left- ProductA : > produce 
 AbstractFactory - ProductB : > produce 
