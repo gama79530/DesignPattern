@@ -1,0 +1,28 @@
+@startuml CommandPattern
+hide empty members
+
+class Client{
+}
+
+class Invoker{
+    - configuredCommands
+    + setConfiguredCommand()
+    + sendOneRequest()
+}
+
+interface Command{
+    - receiver
+    + execute()
+}
+
+interface Receiver{
+    + action()
+}
+
+Client -left- Invoker : < provide interface 
+Invoker -left- Client : < configure
+Client -- Command : > set the receiver of command
+Invoker -- Command : > manage requests of command
+Command -left- Receiver : > trigger action
+
+@enduml

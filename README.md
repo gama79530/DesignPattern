@@ -45,7 +45,7 @@ Depend upon abstractions. Do not depend upon concrete classes
 
 ### 個人歸納
 1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)
-2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)
+2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)
 
 ## Reference
 1. [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).

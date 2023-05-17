@@ -1,0 +1,88 @@
+@startuml example
+hide empty members
+
+interface Receiver{
+    + boolean on()
+    + boolean off()
+}
+
+class Light{
+    - bool state
+    + void on()
+    + void off()
+    + int getState()
+}
+
+class Fan{
+    - {static} int MAX_SPEED
+    - int speed
+    + void on()
+    + void off()
+    + int getState()
+}
+
+interface Command{
+    + void execute()
+    + void undo()
+}
+
+class LightOnCommand{
+    - Receiver receiver
+    + LightOnCommand(Receiver receiver)
+    + void execute()
+    + void undo()
+}
+
+class LightOffCommand{
+    - Receiver receiver
+    + LightOffCommand(Receiver receiver)
+    + void execute()
+    + void undo()
+}
+
+class FanOnCommand{
+    - Receiver receiver
+    - int statae
+    + FanOnCommand(Receiver receiver)
+    + void execute()
+    + void undo()
+}
+
+class FanOffCommand{
+    - Receiver receiver
+    - int statae
+    + FanOffCommand(Receiver receiver)
+    + void execute()
+    + void undo()
+}
+
+class MacroCommand{
+    - List<Command> commands
+    + MacroCommand(List<Command> commands)
+    + void execute()
+    + void undo()
+}
+
+class RemoteControl{
+    - Command[] onCommands
+    - Command[] offCommands
+    - Stack<Command> history
+    + void setOnCommand(Command command, int slot)
+    + void setOffCommand(Command command, int slot)
+    + void pressOnButton(int slot)
+    + void pressOffButton(int slot)
+    + void pressUndo()
+}
+
+Receiver <|-- Light
+Receiver <|-- Fan
+
+Command <|-- LightOnCommand
+Command <|-- LightOffCommand
+Command <|-- FanOnCommand
+Command <|-- FanOffCommand
+Command <|-- MacroCommand
+
+Command -left- Receiver: > trigger action
+
+@enduml
