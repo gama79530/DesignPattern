@@ -1,13 +1,13 @@
 package CommandPattern.java_.Receiver;
 
 public class Light implements Receiver{
-    private boolean state = false;
+    private boolean isOn = false;
     
     @Override
     public boolean on() {
-        if(!state){
+        if(!isOn){
             System.out.println("Light on");
-            state = true;
+            isOn = true;
             return true;
         }else{
             System.out.println("Light is already on.");
@@ -17,9 +17,9 @@ public class Light implements Receiver{
 
     @Override
     public boolean off() {
-        if(state){
+        if(isOn){
             System.out.println("Light off");
-            state = false;
+            isOn = false;
             return true;
         }else{
             System.out.println("Light is already off.");

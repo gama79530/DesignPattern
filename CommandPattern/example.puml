@@ -24,6 +24,7 @@ class Fan{
 interface Command{
     + void execute()
     + void undo()
+    + Command clone()
 }
 
 class LightOnCommand{
@@ -31,6 +32,7 @@ class LightOnCommand{
     + LightOnCommand(Receiver receiver)
     + void execute()
     + void undo()
+    + Command clone()
 }
 
 class LightOffCommand{
@@ -38,6 +40,7 @@ class LightOffCommand{
     + LightOffCommand(Receiver receiver)
     + void execute()
     + void undo()
+    + Command clone()
 }
 
 class FanOnCommand{
@@ -46,6 +49,7 @@ class FanOnCommand{
     + FanOnCommand(Receiver receiver)
     + void execute()
     + void undo()
+    + Command clone()
 }
 
 class FanOffCommand{
@@ -54,6 +58,7 @@ class FanOffCommand{
     + FanOffCommand(Receiver receiver)
     + void execute()
     + void undo()
+    + Command clone()
 }
 
 class MacroCommand{
@@ -61,6 +66,7 @@ class MacroCommand{
     + MacroCommand(List<Command> commands)
     + void execute()
     + void undo()
+    + Command clone()
 }
 
 class RemoteControl{

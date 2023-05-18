@@ -2,30 +2,30 @@ package CommandPattern.java_.Receiver;
 
 public class Fan implements Receiver{
     private static int MAX_SPEED = 5;
-    private int state = 0;
+    private int currentLevel = 0;
 
     @Override
     public boolean on() {
-        if(state < MAX_SPEED){
-            if(++state == MAX_SPEED){
-                System.out.println(String.format("The speed of fan is max level (level %d)", state));
+        if(currentLevel < MAX_SPEED){
+            if(++currentLevel == MAX_SPEED){
+                System.out.println(String.format("The speed of fan is max level (level %d)", currentLevel));
             }else{
-                System.out.println(String.format("The speed of fan is level %d", state));
+                System.out.println(String.format("The speed of fan is level %d", currentLevel));
             }
             return true;
         }else{
-            System.out.println("The current level is maximum.");
+            System.out.println("The current level is already maximum.");
             return false;
         }
     }
 
     @Override
     public boolean off() {
-        if(state > 0){
-            if(--state == 0){
+        if(currentLevel > 0){
+            if(--currentLevel == 0){
                 System.out.println("The fan is off");
             }else{
-                System.out.println(String.format("The speed of fan is level %d", state));
+                System.out.println(String.format("The speed of fan is level %d", currentLevel));
             }
             return true;
         }else{

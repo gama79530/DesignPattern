@@ -24,9 +24,11 @@ class Main{
         remoteControl.setOffCommand(new LightOffCommand(light), 0);
         remoteControl.setOffCommand(new FanOffCommand(fan), 1);
         remoteControl.setOffCommand(new MacroCommand(commands), 2);
+
         System.out.println("Button set 1");
         remoteControl.pressOnButton(0);
         remoteControl.pressOffButton(0);
+
         System.out.println("\nButton set 2");
         remoteControl.pressOnButton(1);
         remoteControl.pressOnButton(1);
@@ -41,6 +43,7 @@ class Main{
         remoteControl.pressOnButton(2);
         remoteControl.pressOffButton(2);
         remoteControl.pressOffButton(2);
+        remoteControl.pressUndo();
         remoteControl.pressUndo();
         remoteControl.pressUndo();
         remoteControl.pressUndo();
