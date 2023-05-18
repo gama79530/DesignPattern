@@ -31,6 +31,7 @@ public class MacroCommand implements Command{
         return isActed;
     }
 
+    @Override
     public Command clone() throws CloneNotSupportedException{
         return (Command)super.clone();
     }

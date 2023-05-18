@@ -23,7 +23,7 @@ The Command Pattern encapsulates a request as an object, thereby letting you par
 ## C++相關
 1. 編譯&執行指令  
 cd CommandPattern/cpp/  
-g++ main.cpp src/beverage.cpp -o main  
+g++ main.cpp src/remote_control.cpp -o main  
 ./main
 
 

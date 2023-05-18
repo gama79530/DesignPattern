@@ -7,30 +7,6 @@ class Receiver(metaclass=abc.ABCMeta):
     
     def off(self) -> bool:
         return NotImplemented
-    
-
-class Light(Receiver):
-    def __init__(self) -> None:
-        super().__init__()
-        self._isOn = False
-
-    def on(self) -> bool:
-        if not self._isOn:
-            print("Light on")
-            self._isOn = True
-            return True
-        else:
-            print("Light is already on.")
-            return False
-
-    def off(self) -> bool:
-        if self._isOn:
-            print("Light off")
-            self._isOn = False
-            return True
-        else:
-            print("Light is already off.")
-            return False
         
 
 class Fan(Receiver):
@@ -64,6 +40,30 @@ class Fan(Receiver):
             return True
         else:
             print("The fan is already off.")
+            return False
+    
+
+class Light(Receiver):
+    def __init__(self) -> None:
+        super().__init__()
+        self._isOn = False
+
+    def on(self) -> bool:
+        if not self._isOn:
+            print("Light on")
+            self._isOn = True
+            return True
+        else:
+            print("Light is already on.")
+            return False
+
+    def off(self) -> bool:
+        if self._isOn:
+            print("Light off")
+            self._isOn = False
+            return True
+        else:
+            print("Light is already off.")
             return False
 
 
