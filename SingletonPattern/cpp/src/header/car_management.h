@@ -11,21 +11,25 @@ using namespace std;
 
 class Car{
 public:
-    Car(int carNo);
-    ~Car() = default;
-
+    friend class CarManager;
+    
     void drive(int clientNo);
     int getCarNo();
     
 private:
     int carNo = 0;
+    
+    Car(int carNo);
+    ~Car() = default;
 };
 
 class CarManager{
 public:
     static CarManager *getInstance();
 
-    ~CarManager();
+    CarManager(const CarManager &) = delete;
+    CarManager& operator=(CarManager &) = delete;
+    ~CarManager() = delete;
     
     int getCarNumber();
     void setCarNumber(int carNumber);
