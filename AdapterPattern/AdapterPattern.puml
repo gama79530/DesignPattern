@@ -1,0 +1,30 @@
+@startuml AdapterPattern
+hide empty members
+
+class Client{
+}
+
+interface Target{
+}
+
+class ObjectAdapter{
+    - Adaptee adaptee
+}
+
+class ClassAdapter{
+}
+
+interface Adaptee{
+}
+
+class ConcreteAdaptee{
+}
+
+Client -right- Target: > use
+Target <|-down- ObjectAdapter
+ObjectAdapter -right- Adaptee: < composite
+Target <|-right- ClassAdapter
+Adaptee <|-right- ConcreteAdaptee
+ConcreteAdaptee <|-up- ClassAdapter
+
+@enduml

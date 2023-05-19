@@ -1,0 +1,51 @@
+@startuml example
+hide empty members
+
+Class Computer{
+    + CPU cpu
+    + GPU gpu1
+    + GPU gpu2
+    + void showInfo()
+}
+
+interface CPU{
+    + String showInfo()
+}
+
+interface GPU{
+    + String showInfo()
+}
+
+class AMD_Ryzen7_3700X{
+    + void showInfo()
+}
+
+class NVIDIA_GeForce_GTX_1660_SUPER{
+    + void showInfo()
+}
+
+interface Old_CPU{
+    + String getName()
+}
+
+class Pentium4{
+    + String getName()
+}
+
+class Old_CPU_Adapter{
+    - Old_CPU old_CPU
+    + OldCPU_Adapter(Old_CPU old_CPU)
+    + String showInfo()
+}
+
+Computer o-- CPU
+Computer o-- GPU
+Old_CPU_Adapter o-- Old_CPU
+
+CPU <|-- AMD_Ryzen7_3700X
+GPU <|-- NVIDIA_GeForce_GTX_1660_SUPER
+GPU <|-- Old_CPU_Adapter
+
+Old_CPU <|-- Pentium4
+
+@enduml
