@@ -1,0 +1,57 @@
+@startuml example
+hide empty members
+
+class Light{
+    - {static} int MAX_LEVEL
+    - boolean isOn
+    - int brightness
+    + boolean getIsOn()
+    + int getBrightness()
+    + void on()
+    + void off()
+    + void brightnessUp()
+    + void brightnessDown()
+}
+
+class AirConditioner{
+    - {static} int MAX_TEMPERATURE
+    - {static} int MIN_TEMPERATURE
+    - boolean isOn
+    - int temperature
+    + boolean getIsOn()
+    + int getTemperature()
+    + void on()
+    + void off()
+    + void temperatureUp()
+    + void temperatureDown()
+}
+
+class WaterDispenser{
+    - boolean isOn
+    + boolean getIsOn()
+    + void on()
+    + void off()
+}
+
+class OfficeFacade{
+    - Light light
+    - AirConditioner airConditioner
+    - WaterDispenser waterDispenser
+
+    + OfficeFacade(Light light, AirConditioner airConditioner, WaterDispenser waterDispenser)
+    + boolean isAllDeviceOn()
+    + void on()
+    + void off()
+    + int getBrightness()
+    + int getTemperature()
+    + void brightnessUp()
+    + void brightnessDown()
+    + void temperatureUp()
+    + void temperatureDown()
+}
+
+OfficeDevice -- Light: use >
+OfficeDevice -- AirConditioner: use >
+OfficeDevice -- WaterDispenser: use >
+
+@enduml

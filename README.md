@@ -20,7 +20,8 @@ Strive for loosely coupled designs between objects that interact.
 Classes should be open for extension, but closed for modification.
 1. 程式要依賴抽象，而非依賴實作類別。  
 Depend upon abstractions. Do not depend upon concrete classes
-
+1.  極少化守則 - 只與直接相依的物件互動。  
+Principle of Least Knowledge - talk only to your immediate friends.
 
 ## 模式分類
 ### 根據目標分類
@@ -44,11 +45,12 @@ Depend upon abstractions. Do not depend upon concrete classes
 
 
 ### 個人歸納
-1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)
-2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)
+1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)、表象模式(Facade Pattern)
+2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)、轉接器模式(Adapter Pattern)
 
 ## Reference
 1. [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).
+1. [Refactoring.Guru](https://refactoring.guru/)
 
 ------
 

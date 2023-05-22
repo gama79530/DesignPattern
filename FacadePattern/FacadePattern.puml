@@ -1,0 +1,32 @@
+@startuml FacadePattern
+hide empty members
+
+interface Facade{
+    highLevelFunctionA()
+    highLevelFunctionB()
+    highLevelFunctionC()
+}
+
+interface ComponentA{
+    lowLevelFunctionA()
+    lowLevelFunctionB()
+    lowLevelFunctionC()
+}
+
+interface ComponentB{
+    lowLevelFunctionA()
+    lowLevelFunctionB()
+    lowLevelFunctionC()
+}
+
+interface ComponentC{
+    lowLevelFunctionA()
+    lowLevelFunctionB()
+    lowLevelFunctionC()
+}
+
+Facade -- ComponentA: > use
+Facade -- ComponentB: > use
+Facade -- ComponentC: > use
+
+@enduml
