@@ -22,6 +22,8 @@ Classes should be open for extension, but closed for modification.
 Depend upon abstractions. Do not depend upon concrete classes
 1.  極少化守則 - 只與直接相依的物件互動。  
 Principle of Least Knowledge - talk only to your immediate friends.
+1. 好萊塢守則 - 由高階物件呼叫低階物件而非不要由低階物件呼叫高階物件。  
+The Hollywood Principle - Don’t call us, we’ll call you.
 
 ## 模式分類
 ### 根據目標分類
@@ -45,7 +47,7 @@ Principle of Least Knowledge - talk only to your immediate friends.
 
 
 ### 個人歸納
-1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)、表象模式(Facade Pattern)
+1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)、表象模式(Facade Pattern)、樣板方法模式(Template Method Pattern)
 2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)、轉接器模式(Adapter Pattern)
 
 ## Reference
@@ -62,8 +64,6 @@ Principle of Least Knowledge - talk only to your immediate friends.
 ## Design Principle
 1. Keep it simple.
 1. Take out what you don’t really need.
-<!-- ch8 -->
-1. Low-level components don't call high-level components.
 <!-- ch9 -->
 1. A class should have only one reason to change.
 

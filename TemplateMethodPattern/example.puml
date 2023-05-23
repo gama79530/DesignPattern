@@ -1,0 +1,34 @@
+@startuml example
+hide empty members
+
+class Solution{
+    + List<Integer> solve(List<Integer> input)
+    # TreeNode listToTree(List<Integer> input, int index)
+    # {abstract} TreeNode invert(TreeNode root)
+    # void treeToList(List<Integer> output, TreeNode root, int index)
+}
+
+class BFS_Solution{
+    + List<Integer> solve(List<Integer> input)
+    # TreeNode listToTree(List<Integer> input, int index)
+    # {abstract} TreeNode invert(TreeNode root)
+    # void treeToList(List<Integer> output, TreeNode root, int index)
+}
+
+class DFS_Solution{
+    + List<Integer> solve(List<Integer> input)
+    # TreeNode listToTree(List<Integer> input, int index)
+    # {abstract} TreeNode invert(TreeNode root)
+    # void treeToList(List<Integer> output, TreeNode root, int index)
+}
+
+class TreeNode{
+    + int val;
+    + TreeNode leftChild;
+    + TreeNode rightChild;
+}
+
+Solution <|-- BFS_Solution
+Solution <|-- DFS_Solution
+
+@enduml

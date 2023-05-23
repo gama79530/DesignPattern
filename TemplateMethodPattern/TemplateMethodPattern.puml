@@ -1,0 +1,28 @@
+@startuml TemplateMethodPattern
+hide empty members
+
+class AlgorithmSkelton{
+    algorithm()
+    {abstract} stepA()
+    {abstract} stepB()
+    {abstract} stepC()
+}
+
+class AlgorithmA{
+    algorithm()
+    stepA()
+    stepB()
+    stepC()
+}
+
+class AlgorithmB{
+    algorithm()
+    stepA()
+    stepB()
+    stepC()
+}
+
+AlgorithmSkelton <|-- AlgorithmA
+AlgorithmSkelton <|-- AlgorithmB
+
+@enduml
