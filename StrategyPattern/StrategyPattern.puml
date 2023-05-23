@@ -11,6 +11,6 @@ interface Strategy{
 }
 
 
-Contex o-- Strategy
+Contex *-- Strategy
 
 @enduml

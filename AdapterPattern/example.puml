@@ -38,8 +38,8 @@ class Old_CPU_Adapter{
     + String showInfo()
 }
 
-Computer o-- CPU
-Computer o-- GPU
+Computer *-- CPU
+Computer *-- GPU
 Old_CPU_Adapter o-- Old_CPU
 
 CPU <|-- AMD_Ryzen7_3700X
