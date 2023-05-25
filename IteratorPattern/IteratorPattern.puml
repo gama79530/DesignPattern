@@ -1,0 +1,20 @@
+@startuml IteratorPattern
+hide empty members
+
+class Client{
+}
+
+interface Iterable{
+    - collection
+    + createIterator()
+}
+
+interface Iterator{
+    + next()
+    + hasNext()
+}
+
+Client -left- Iterable: > use
+Client -right- Iterator: > use
+
+@enduml

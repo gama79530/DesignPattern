@@ -26,8 +26,7 @@ cd StrategyPattern/cpp/
 g++ main.cpp src/computer.cpp -o main  
 ./main
 1. 因為C++有function pointer可以使用，因此演算法也可以使用function與function pointer來搭配完成合成
-2. Aggregation member用指標(要處理destructor)，Composition用Refference會比較好操作。
-4. 利用C++的smart pointer會比較容易處理Aggregation member。
+2. 利用C++的smart pointer會比較容易避免memory leak。
 
 ## python相關
 1. 因為python的function也是物件，因此若演算法物件只提供單一功能的話也可以直接用function做合成而非一定要定義一個class

@@ -46,9 +46,9 @@ The Hollywood Principle - Don’t call us, we’ll call you.
    Object patterns describe relationships between objects and are primarily defined by composition. Relationships in object patterns are typically created at runtime and are more dynamic and flexible.
 
 
-### 個人歸納
+### 個人歸納分類
 1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)、表象模式(Facade Pattern)、樣板方法模式(Template Method Pattern)
-2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)、轉接器模式(Adapter Pattern)
+2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)、轉接器模式(Adapter Pattern)、迭代器模式(Iterator Pattern)
 
 ## Reference
 1. [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).
