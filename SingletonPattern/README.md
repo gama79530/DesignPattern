@@ -1,4 +1,4 @@
-# 觀察者模式(Observer Pattern)
+# 獨體模式 (Singleton Pattern)
 獨體模式確保類別只會有一個實體，並提供了一個全域存取點。  
 The Singleton Pattern ensures a class has only one instance, and provides a global point of access to it.
 

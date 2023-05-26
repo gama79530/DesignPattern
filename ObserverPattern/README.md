@@ -1,4 +1,4 @@
-# 觀察者模式(Observer Pattern)
+# 觀察者模式 (Observer Pattern)
 觀察者模式定義了物件之間的一對多關係使得當一個物件改變狀態時其餘相依物件都會收到通知並更新。  
 The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all of its dependents are notified and updated automatically.
 

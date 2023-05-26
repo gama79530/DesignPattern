@@ -1,4 +1,4 @@
-# Decorator Pattern (Structural, Object)
+# 裝飾者模式 (Decorator Pattern)
 裝飾者模式可以動態的將額外職責增加到物件上，裝飾者在提供額外功能這件事上提供了比繼承更有彈性的選擇。
 The Decorator Pattern attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.
 

@@ -1,4 +1,4 @@
-# 工廠方法模式(Factory Method Pattern)
+# 工廠方法模式 (Factory Method Pattern)
 工廠方法模式定義了一個用來產生物件的介面，但讓子類別決定要實體化哪種類別。工廠方法把實體化的責任轉移給子類別。  
 The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses.
 

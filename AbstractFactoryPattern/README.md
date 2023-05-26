@@ -1,4 +1,4 @@
-# 抽象工廠模式(Abstract Factory Pattern)
+# 抽象工廠模式 (Abstract Factory Pattern)
 抽象工廠模式提供一個介面用賴建立一些相關或相依的物件家族，而不需要明確指定具體類別。
 The Abstract Factory Pattern provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 

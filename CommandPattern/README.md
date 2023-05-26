@@ -1,4 +1,4 @@
-# Command Pattern (Behavioral, Object)
+# 命令模式 (Command Pattern)
 命令模式將請求封裝成物件，因而使你可以將不同請求的物件參數化、對請求做queue或log以及支援復原動作。
 The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
 

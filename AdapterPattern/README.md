@@ -1,4 +1,4 @@
-# 策略模式 (Strategy Pattern)
+# 轉接器模式 (Adapter Pattern)
 轉接器模式將類別的介面傳換成另外一個client預期介面。轉接器讓只因介面不相容而不能一起使用的類別可以一起工作。  
 The Adapter Pattern converts the interface of a class into another interface the clients expect. Adapter lets classes work together that couldn’t otherwise because of incompatible interfaces.
 
