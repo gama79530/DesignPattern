@@ -25,3 +25,11 @@ The Composite Pattern allows you to compose objects into tree structures to repr
 cd CompositePattern/cpp/  
 g++ main.cpp src/menu.cpp -o main  
 ./main
+
+
+## 其它
+1. 合成模式可以跟迭代器合在一起使用，可以設計一個合成迭代器去遍歷整棵樹狀結構
+2. 若要加強通透性(transparency)的話可以讓leaf與internal node都實作相同介面。但這樣的話leaf對於操作聚合的方法需要考慮設計是否要拋出exception。
+3. leaf的迭代器可以設計成空迭代器，該迭代器的hasNext永遠回傳false
+4. 若藉由遍歷樹狀結構才能完成某件事情太花時間的話可以在internal node設計一些cache把子樹的結果存起來讓下次呼叫時可以加速。
+5. 這個模式常見於GUI相關的設計上。
