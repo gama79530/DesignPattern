@@ -1,0 +1,44 @@
+@startuml example
+hide empty members
+
+interface MenuItem{
+    + String toString()
+}
+
+interface Menu{
+    + String toString()
+    + void addMenuItem(MenuItem menuItem)
+    + boolean removeMenuItem(MenuItem menuItem)
+}
+
+class MenuBook{
+    - String description
+    - List<MenuItem> menuItems;
+    + MenuBook(String description)
+    + void addMenuItem(MenuItem menuItem)
+    + boolean removeMenuItem(MenuItem menuItem)
+    + String toString()
+}
+
+class SubMenu{
+    - String description
+    - List<MenuItem> menuItems;
+    + SubMenu(String description)
+    + void addMenuItem(MenuItem menuItem)
+    + boolean removeMenuItem(MenuItem menuItem)
+    + String toString()
+}
+
+class Item{
+    - String description
+    + Item(String description)
+    + String toString()
+}
+
+MenuItem <|-- Menu
+Menu <|-- MenuBook
+Menu <|-- SubMenu
+MenuItem <|-- Item
+Menu o-right- Item
+
+@enduml

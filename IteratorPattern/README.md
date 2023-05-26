@@ -23,7 +23,7 @@ The Iterator Pattern provides a way to access the elements of an aggregate objec
 cd IteratorPattern/cpp/  
 g++ main.cpp src/vehicle.cpp src/garage.cpp -o main  
 ./main
-1. 在使用template的時候可能會有link error，其主要原因是template工作原理有點類似macro，都是在編譯期將定義展開，最大的不同在於使用template的話compiler可以幫忙做類型檢查
+1. 在使用template的時候可能會有link error，其主要原因是template工作原理有點類似macro，都是在編譯期將定義展開，最大的不同在於使用template的話compiler可以幫忙做類型檢查。
 2. [How to Define a Template Class in a .h File and Implement it in a .cpp File](https://www.codeproject.com/Articles/48575/How-to-Define-a-Template-Class-in-a-h-File-and-Imp)提供了三種解決方法，目前測試只有第二種方法能符合目前我們的project的架構。另外兩種方法可能需要搭配專案架構才能用。  
    - 在source檔裡面強迫compiler產生一個會被用到的實體。
    - clinet檔除了include header檔之外把source檔也include

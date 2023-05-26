@@ -1,0 +1,28 @@
+@startuml CompositePattern
+hide empty members
+
+class Client{
+}
+
+interface Component{
+    operation()
+}
+
+class Composite{
+    operation()
+    add(component)
+    remove(component)
+    getChild()
+}
+
+class Leaf{
+    operation()
+}
+
+Client -- Component: use >
+Component <|-- Composite
+Component <|-- Leaf
+Composite o-right- Leaf 
+
+
+@enduml
