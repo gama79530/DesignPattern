@@ -4,9 +4,6 @@
 1. 這個project主要是要練習一些關於OOP設計模式的例子,提供了C++、Java與Python實作，主要的知識來源是Head First Design Patterns這本書，另外也參考一些網路上的文章。
 2. 所有UML與範例都是以Java為基準，其他程式語言的實作可能會因應程式語言的特性而做些微調整
 
-** 目前正在慢慢重構中，有些舊的內容還沒開始重構的會先暫時留著 **
-
-
 ## 設計守則
 1. 找出程式中可能需要變動之處並將它們獨立出來。  
 Identify the aspects of your application that vary and separate them from what stays the same.
@@ -54,13 +51,14 @@ A class should have only one reason to change.
 ### 個人歸納分類
 1. **著重在抽象設計** : 策略模式(Strategy Pattern)、抽象工廠模式(Abstract Factory Pattern)、表象模式(Facade Pattern)、樣板方法模式(Template Method Pattern)
 
-2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)、轉接器模式(Adapter Pattern)、迭代器模式(Iterator Pattern)、合成模式 (Composite Pattern)
+2. **針對特定需求的套路** : 觀察者模式(Observer Pattern)、裝飾者模式(Decorator Pattern)、工廠方法模式(Factory Method Pattern)、獨體模式(Singleton Pattern)、命令模式(Command Pattern)、轉接器模式(Adapter Pattern)、迭代器模式(Iterator Pattern)、合成模式 (Composite Pattern)、狀態模式(State Pattern)
+
 
 ## Reference
 1. [Head First Design Patterns](https://www.oreilly.com/library/view/head-first-design/0596007124/).
 1. [Refactoring.Guru](https://refactoring.guru/)
 
-------
+<!-- 
 
 ## Comment
 1. As time passing, the problem may not be the same as the original.
@@ -95,4 +93,6 @@ objects in the design. This section describes their responsibilities and roles i
 1. **Implementation / Sample code**
 1. **Known uses** describes examples of this pattern
 found in real systems.
-1. **Related patterns** describes the relationship between this pattern and others.
+1. **Related patterns** describes the relationship between this pattern and others. 
+
+-->

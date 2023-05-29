@@ -1,0 +1,12 @@
+@startuml example_state
+hide empty members
+
+state OffDutyLights
+state OnDutyLight
+
+OffDutyLights -down-> OnDutyLight: booked or hailed
+OnDutyLight -right-> Arrived: drive
+Arrived -up-> OffDutyLights: checkout
+
+@enduml
+

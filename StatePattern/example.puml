@@ -1,0 +1,50 @@
+@startuml example
+hide empty members
+
+
+class Taxi{
+    - State state
+    - OffDutyLights offDutyLights
+    - OnDutyLight onDutyLight
+    - Arrived arrived
+
+    + Taxi()
+    + State getState()
+    ~ OffDutyLights getOffDutyLights()
+    ~ OnDutyLight getOnDutyLight()
+    ~ Arrived getArrived()
+    + void hailed()
+    + void checkout()
+}
+
+interface State{
+    + State hailed(Taxi taxi)
+    + State drive(Taxi taxi)
+    + State checkout(Taxi taxi)
+}
+
+class OffDutyLights{
+    + State hailed(Taxi taxi)
+    + State drive(Taxi taxi)
+    + State checkout(Taxi taxi)
+}
+
+class OnDutyLight{
+    + State hailed(Taxi taxi)
+    + State drive(Taxi taxi)
+    + State checkout(Taxi taxi)
+}
+
+class Arrived{
+    + State hailed(Taxi taxi)
+    + State drive(Taxi taxi)
+    + State checkout(Taxi taxi)
+}
+
+Taxi *-right- State
+State <|-- OffDutyLights
+State <|-- OnDutyLight
+State <|-- Arrived
+
+@enduml
+

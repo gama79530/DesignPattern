@@ -1,0 +1,28 @@
+@startuml StatePattern
+hide empty members
+
+class Client{
+}
+
+class Context{
+    + request()
+}
+
+interface State{
+    + handle()
+}
+
+class ConcreteStateA{
+    + handle()
+}
+
+class ConcreteStateB{
+    + handle()
+}
+
+Client -right- Context: send request >
+Context *-right- State
+State <|-- ConcreteStateA
+State <|-- ConcreteStateB
+
+@enduml
