@@ -1,0 +1,48 @@
+@startuml example
+hide empty members
+
+class Account{
+    - int balance
+    + int getBalance()
+    + void addBalanceAccount(int amount)
+    + void subtractBalanceAccount(int amount)
+}
+
+interface java.rmi.Remote{
+}
+
+interface Proxy{
+    + void addBalanceAccount(int amount)
+    + void subtractBalanceAccount(int amount)
+    + int getBalanceAccount()
+}
+
+class Skeletons{
+    - Account account
+
+    + Service(Account account)
+    + void addBalanceAccount(int amount)
+    + void subtractBalanceAccount(int amount)
+    + int getBalanceAccount()
+}
+
+
+class Service{
+    + int port
+    + Service(int port)
+    + int getPort()
+    + void bind(String name, java.rmi.Remote skeleton)
+    + {static} void main(String[] args)
+}
+
+class Client{
+    + {static} void main(String[] args)
+}
+
+java.rmi.Remote <|-- Proxy
+Proxy <|-- Skeletons
+java.rmi.server.UnicastRemoteObject <|-- Skeletons
+Skeletons -- Account: proxy of >
+
+
+@enduml

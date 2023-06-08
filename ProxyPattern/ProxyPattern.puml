@@ -1,0 +1,25 @@
+@startuml FacadePattern
+hide empty members
+
+class Client{
+}
+
+interface Subject{
+    + request()
+}
+
+class Proxy{
+    + request()
+}
+
+class RealSubject{
+    + request()
+}
+
+Client -up- Proxy: manipulate directly >
+Client -up- RealSubject: manipulate indirectly >
+Proxy -right- RealSubject: subject >
+Subject <|-- Proxy
+Subject <|-- RealSubject
+
+@enduml
