@@ -26,6 +26,10 @@ cd DecoratorPattern/cpp/
 g++ main.cpp src/beverage.cpp -o main  
 ./main
 
+2. 使用makefile
+cd DecoratorPattern/cpp/  
+make
+
 ## Python相關
 1. python有提供特Decorator的語法糖，但該語法被限制只能用callable object或nested function來實現Decorator，並且只能將Decorator套在function object上
 

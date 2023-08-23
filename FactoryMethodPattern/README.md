@@ -24,6 +24,10 @@ cd FactoryMethodPattern/cpp/
 g++ main.cpp src/pizza_store.cpp -o main  
 ./main
 
+2. 使用makefile
+cd FactoryMethodPattern/cpp/  
+make
+
 
 ## 其它
 1. 這個模式比較適用於實體化時不需要大量合成的物件，若物件實體化需要大量合成則採用抽象工廠模式。通常具有這種特性的物件是屬於比較低階的基本類別。

@@ -29,6 +29,10 @@ cd ObserverPattern/cpp/
 g++ main.cpp src/audience.cpp src/streamer.cpp -o main  
 ./main
 
+2. 使用makefile
+cd ObserverPattern/cpp/  
+make
+
 
 ## 其它
 1. 這個模式經常被運用在GUI的Listener上，用來實作監控GUI元件觸發某事件時的反應。GUI元件是個Subject物件，用來對事件做反應動作的Listener是個Observer物件

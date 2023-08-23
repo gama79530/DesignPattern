@@ -25,6 +25,10 @@ g++ main.cpp src/taxi.cpp -o main
 1. class circular dependency 要靠 forward declaratation解決。
 1. share_ptr只能用複製的或者從make_share取得，否則物件的記憶體空間會被錯誤的釋放掉。
 
+2. 使用makefile
+cd StatePattern/cpp/  
+make
+
 
 # 其它
 1. 這個模式有點像是把策略模式利用在狀態機上面。但策略模式通常事由Client去切換演算法，而狀態模式則是而狀態模式則是Context本身會自主切換。

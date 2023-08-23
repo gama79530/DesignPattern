@@ -26,6 +26,10 @@ cd TemplateMethodPattern/cpp/
 g++ main.cpp src/solution.cpp -o main  
 ./main
 
+2. 使用makefile
+cd TemplateMethodPattern/cpp/  
+make
+
 ## 其它
 1. 樣板方法執行的過程中可以增加一些基於某個method回傳的boolean決定要不要執行另外一個步驟的if語句。這個回傳boolean值的method稱為掛勾(hook)。我們可以在子類別推翻這個方法來決定要不要使用掛勾。
 1. 演算法步驟要切割多細是在**實作複雜度**與**變更彈性**之間做trade-off。

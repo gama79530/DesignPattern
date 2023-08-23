@@ -29,6 +29,10 @@ g++ main.cpp src/vehicle.cpp src/garage.cpp -o main
    - clinet檔除了include header檔之外把source檔也include
    - header檔也include source檔，並且把source檔從專案中移除(但是檔案要留著)
 
+2. 使用makefile
+cd IteratorPattern/cpp/  
+make
+
 
 ## python相關
 1. 只要實作 \_\_next\_\_ 讓該方法**每次回傳一個物件直到迭代完成後raise StopIteration**的物件就是Iiterator物件。

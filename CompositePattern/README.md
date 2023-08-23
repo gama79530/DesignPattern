@@ -26,6 +26,9 @@ cd CompositePattern/cpp/
 g++ main.cpp src/menu.cpp -o main  
 ./main
 
+2. 使用makefile
+cd CompositePattern/cpp/  
+make
 
 ## 其它
 1. 合成模式可以跟迭代器合在一起使用，可以設計一個合成迭代器去遍歷整棵樹狀結構

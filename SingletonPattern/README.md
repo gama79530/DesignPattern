@@ -23,6 +23,11 @@ The Singleton Pattern ensures a class has only one instance, and provides a glob
 cd SingletonPattern/cpp/  
 g++ main.cpp src/car_management.cpp -o main
 ./main
+
+2. 使用makefile
+cd SingletonPattern/cpp/  
+make
+
 1. C++的synchronized要利用lock自己做。
 
 ## Java相關

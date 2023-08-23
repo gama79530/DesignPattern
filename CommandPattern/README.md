@@ -26,6 +26,10 @@ cd CommandPattern/cpp/
 g++ main.cpp src/remote_control.cpp -o main  
 ./main
 
+2. 使用makefile
+cd CommandPattern/cpp/  
+make
+
 
 ## 其它
 1. 除了標準的單一指令之外可以提供以下兩種指令方便整個系統的操作

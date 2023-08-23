@@ -24,4 +24,9 @@ The Adapter Pattern converts the interface of a class into another interface the
 cd AdapterPattern/cpp/  
 g++ main.cpp src/computer.cpp src/lib/old_cpu.cpp -o main  
 ./main
+
+2. 使用makefile
+cd AdapterPattern/cpp/  
+make
+
 1. c++版本採用類別轉接器處裡

@@ -26,6 +26,9 @@ cd AbstractFactoryPattern/cpp/
 g++ main.cpp src/ingredient_factory.cpp src/ingredient.cpp src/pizza_store.cpp src/pizza.cpp -o main  
 ./main
 
+2. 使用makefile
+cd AbstractFactoryPattern/cpp/  
+make
 
 ## 其它
 1. 這個模式比較適用於需要由大量基本類別合成的高階類別。而提供基本類別的實作則常由工廠方法模式去實作。

@@ -23,3 +23,7 @@ The Facade Pattern provides a unified interface to a set of interfaces in a subs
 cd FacadePattern/cpp/  
 g++ main.cpp src/office_device.cpp -o main  
 ./main
+
+2. 使用makefile
+cd FacadePattern/cpp/  
+make
