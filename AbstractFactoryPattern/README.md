@@ -22,16 +22,17 @@ The Abstract Factory Pattern provides an interface for creating families of rela
 
 程式模擬一個 Pizza 連鎖店， Pizza 店賣的各種 pizza 必須提供一個可以被查詢原料組成的功能，所以可以很容易的連結到使用策略模式的合成來實現。為此本範例定義了 `Pizza` 介面作為 Pizza 店的產品介面。為了控制 pizza 的食材標準，接著又定義了一個 `Ingredient` 介面用來定義合格食材的標準。為了讓各個分店可以各自管理自己的食材來源，因此接著定義了 `IngredientFactory` 讓各個分店可以在統一的規格下各自管理食材來源。
 
-## C++相關
+## C++相關編譯 & 執行指令  
 
-1. 編譯&執行指令  
+```bash
 cd AbstractFactoryPattern/cpp/  
 g++ main.cpp src/ingredient_factory.cpp src/ingredient.cpp src/pizza_store.cpp src/pizza.cpp -o main  
 ./main
 
-2. 使用makefile
+# or use makefile
 cd AbstractFactoryPattern/cpp/  
 make
+```  
 
 ## 其它
 
