@@ -15,23 +15,7 @@ interface Decorator{
     + aMethod()
 }
 
-class ConcreteBaseComponentA{
-}
-
-class ConcreteBaseComponentB{
-}
-
-class ConcreteDecoratorA{
-}
-
-class ConcreteDecoratorB{
-}
-
 Component <|-- BaseComponent
 Component <|-- Decorator
-BaseComponent <|-- ConcreteBaseComponentA
-BaseComponent <|-- ConcreteBaseComponentB
-Decorator <|-- ConcreteDecoratorA
-Decorator <|-- ConcreteDecoratorB
 
 @enduml

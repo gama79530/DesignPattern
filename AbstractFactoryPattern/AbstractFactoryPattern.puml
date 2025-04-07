@@ -15,34 +15,10 @@ interface ProductA{
 interface ProductB{
 }
 
-class ConcreteProductA1{
-}
-
-class ConcreteProductA2{
-}
-
-class ConcreteProductB1{
-}
-
-class ConcreteProductB2{
-}
-
-class ConcreteFactory1{
-}
-
-class ConcreteFactory2{
-}
-
 AbstractFactory -left- ProductA : > produce 
 AbstractFactory - ProductB : > produce 
 
 Client -down- AbstractFactory : > use
 Client -down- ProductA : > dependent
 Client -down- ProductB : > dependent
-ProductA <|-down- ConcreteProductA1
-ProductA <|-down- ConcreteProductA2
-ProductB <|-down- ConcreteProductB1
-ProductB <|-down- ConcreteProductB2
-AbstractFactory <|-down- ConcreteFactory1
-AbstractFactory <|-down- ConcreteFactory2
 @enduml

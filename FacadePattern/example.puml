@@ -50,8 +50,8 @@ class OfficeFacade{
     + void temperatureDown()
 }
 
-OfficeDevice -- Light: use >
-OfficeDevice -- AirConditioner: use >
-OfficeDevice -- WaterDispenser: use >
+OfficeFacade -- Light: use >
+OfficeFacade -- AirConditioner: use >
+OfficeFacade -- WaterDispenser: use >
 
 @enduml
