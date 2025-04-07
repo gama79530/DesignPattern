@@ -38,7 +38,7 @@ The Command Pattern encapsulates a request as an object, thereby letting you par
 
 程式模擬了一支萬用的遙控器，遙控器有 3 組 on-off 的按鍵，我們可以設定它們的功能。其中 2 組按鍵分別對應到開關燈與電風扇的風速的增減。最後一組的按鍵設定是把前面兩組同時 on 或 off 。
 
-## C++相關編譯 & 執行指令  
+## C++ 相關編譯 & 執行指令  
 
 ```bash
 cd CommandPattern/cpp/  
@@ -48,4 +48,4 @@ g++ main.cpp src/remote_control.cpp -o main
 # or use makefile
 cd CommandPattern/cpp/  
 make
-```  
+```

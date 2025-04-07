@@ -25,7 +25,7 @@ The Adapter Pattern converts the interface of a class into another interface the
 
 Python 與 Java 的範例使用`物件轉接器`的作法。而 C++ 的範例使用`類別轉接器`。
 
-## C++相關編譯 & 執行指令  
+## C++ 相關編譯 & 執行指令  
 
 ```bash
 cd AdapterPattern/cpp/  
@@ -35,4 +35,4 @@ g++ main.cpp src/computer.cpp src/lib/old_cpu.cpp -o main
 # or use makefile
 cd AdapterPattern/cpp/  
 make
-```  
+```

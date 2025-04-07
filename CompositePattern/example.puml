@@ -40,5 +40,6 @@ Menu <|-- MenuBook
 Menu <|-- SubMenu
 MenuItem <|-- Item
 Menu o-right- Item
+MenuBook o-right- SubMenu
 
 @enduml
