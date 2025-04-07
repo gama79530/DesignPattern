@@ -7,6 +7,12 @@ class Client{
 interface Target{
 }
 
+interface Adapter{
+}
+
+interface Adaptee{
+}
+
 class ObjectAdapter{
     - Adaptee adaptee
 }
@@ -14,17 +20,14 @@ class ObjectAdapter{
 class ClassAdapter{
 }
 
-interface Adaptee{
-}
-
 class ConcreteAdaptee{
 }
 
 Client -right- Target: > use
-Target <|-down- ObjectAdapter
-ObjectAdapter -right- Adaptee: < composite
+Target <|-down- Adapter
+Adapter <|-right- ObjectAdapter
+Adaptee <|-down-ConcreteAdaptee
 Target <|-right- ClassAdapter
-Adaptee <|-right- ConcreteAdaptee
-ConcreteAdaptee <|-up- ClassAdapter
-
+ConcreteAdaptee <|-- ClassAdapter
+ObjectAdapter -- Adaptee: < composite
 @enduml
