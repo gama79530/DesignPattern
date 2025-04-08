@@ -5,14 +5,16 @@
 
 using namespace std;
 
-class Vehicle{
+class Vehicle
+{
 public:
     virtual string getDescription() = 0;
     virtual string getLicensePlateNumber() = 0;
     virtual string toString() = 0;
 };
 
-class Motorcycle: public Vehicle{
+class Motorcycle : public Vehicle
+{
 public:
     Motorcycle(string description, string licensePlateNumber);
     string getDescription();
@@ -24,7 +26,8 @@ private:
     string licensePlateNumber;
 };
 
-class Car: public Vehicle{
+class Car : public Vehicle
+{
 public:
     Car(string description, string licensePlateNumber);
     string getDescription();

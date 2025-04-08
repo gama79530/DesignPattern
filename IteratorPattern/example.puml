@@ -11,22 +11,16 @@ class Motorcycle{
     - String description
     - String licensePlateNumber
     + Motorcycle(String description, String licensePlateNumber)
-    + String getDescription()
-    + String getLicensePlateNumber()
-    + String toString()
 }
 
 class Car{
     - String description
     - String licensePlateNumber
     + Car(String description, String licensePlateNumber)
-    + String getDescription()
-    + String getLicensePlateNumber()
-    + String toString()
 }
 
-class Garage{
-    - Vehicle[] vehicle
+class Garage<T>{
+    - List<Vehicle> vehicles
     + void addVehicle(Vehicle vehicle)
     + Iterator<Vehicle> createIterator()
 }

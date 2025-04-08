@@ -1,35 +1,43 @@
-#include "header/vehicle.h"
+#include "vehicle.h"
 
-Motorcycle::Motorcycle(string description, string licensePlateNumber){
+Motorcycle::Motorcycle(string description, string licensePlateNumber)
+{
     this->description = description;
     this->licensePlateNumber = licensePlateNumber;
 }
 
-string Motorcycle::getDescription(){
+string Motorcycle::getDescription()
+{
     return description;
 }
 
-string Motorcycle::getLicensePlateNumber(){
+string Motorcycle::getLicensePlateNumber()
+{
     return licensePlateNumber;
 }
 
-string Motorcycle::toString(){
+string Motorcycle::toString()
+{
     return "Motorcycle:" + description + ", license plate number: " + licensePlateNumber;
 }
 
-Car::Car(string description, string licensePlateNumber){
+Car::Car(string description, string licensePlateNumber)
+{
     this->description = description;
     this->licensePlateNumber = licensePlateNumber;
 }
 
-string Car::getDescription(){
+string Car::getDescription()
+{
     return description;
 }
 
-string Car::getLicensePlateNumber(){
+string Car::getLicensePlateNumber()
+{
     return licensePlateNumber;
 }
 
-string Car::toString(){
+string Car::toString()
+{
     return "Car:" + description + ", license plate number: " + licensePlateNumber;
 }

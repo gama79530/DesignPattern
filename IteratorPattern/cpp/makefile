@@ -1,18 +1,15 @@
 vpath %.cpp src
-vpath %.h src/header
+vpath %.h header
 
 CXX = g++
 
 all: main clean run
 
-main: main.cpp vehicle.o garage.o
-	@$(CXX) $^ -o $@
+main: main.cpp vehicle.o garage.h
+	@$(CXX) $^ -Iheader -o $@
 
 vehicle.o: vehicle.cpp vehicle.h
-	@$(CXX) $< -c
-
-garage.o: garage.cpp garage.h
-	@$(CXX) $< -c
+	@$(CXX) $< -I./header -c
 
 .PHONY: clean run
 
