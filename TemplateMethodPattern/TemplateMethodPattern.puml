@@ -1,7 +1,7 @@
 @startuml TemplateMethodPattern
 hide empty members
 
-class AlgorithmSkelton{
+abstract class AlgorithmSkelton{
     algorithm()
     {abstract} stepA()
     {abstract} stepB()
