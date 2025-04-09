@@ -10,7 +10,15 @@ interface Strategy{
     + strategyMethod()
 }
 
+class ConcreteStrategyA{
+}
+
+class ConcreteStrategyB{
+}
+
 
 Contex *-- Strategy
+Strategy <|-- ConcreteStrategyA
+Strategy <|-- ConcreteStrategyB
 
 @enduml
